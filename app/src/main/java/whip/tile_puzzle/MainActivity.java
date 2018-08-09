@@ -223,55 +223,55 @@ public class MainActivity extends AppCompatActivity {
             } else if (Settings.Image == 1){
 
                 if (tileList[i].equals("0"))
-                    button.setBackgroundResource(R.drawable.);
+                    button.setBackgroundResource(R.drawable.anime1_part_001);
                 else if (tileList[i].equals("1"))
-                    button.setBackgroundResource(R.drawable.image_part_002);
+                    button.setBackgroundResource(R.drawable.anime1_part_002);
                 else if (tileList[i].equals("2"))
-                    button.setBackgroundResource(R.drawable.image_part_003);
+                    button.setBackgroundResource(R.drawable.anime1_part_003);
                 else if (tileList[i].equals("3"))
-                    button.setBackgroundResource(R.drawable.image_part_004);
+                    button.setBackgroundResource(R.drawable.anime1_part_004);
                 else if (tileList[i].equals("4"))
-                    button.setBackgroundResource(R.drawable.image_part_005);
+                    button.setBackgroundResource(R.drawable.anime1_part_005);
                 else if (tileList[i].equals("5"))
-                    button.setBackgroundResource(R.drawable.image_part_006);
+                    button.setBackgroundResource(R.drawable.anime1_part_006);
                 else if (tileList[i].equals("6"))
-                    button.setBackgroundResource(R.drawable.image_part_007);
+                    button.setBackgroundResource(R.drawable.anime1_part_007);
                 else if (tileList[i].equals("7"))
-                    button.setBackgroundResource(R.drawable.image_part_008);
+                    button.setBackgroundResource(R.drawable.anime1_part_008);
                 else if (tileList[i].equals("8"))
-                    button.setBackgroundResource(R.drawable.image_part_009);
+                    button.setBackgroundResource(R.drawable.anime1_part_009);
                 else if (tileList[i].equals("9"))
-                    button.setBackgroundResource(R.drawable.image_part_010);
+                    button.setBackgroundResource(R.drawable.anime1_part_010);
                 else if (tileList[i].equals("10"))
-                    button.setBackgroundResource(R.drawable.image_part_011);
+                    button.setBackgroundResource(R.drawable.anime1_part_011);
                 else if (tileList[i].equals("11"))
-                    button.setBackgroundResource(R.drawable.image_part_012);
+                    button.setBackgroundResource(R.drawable.anime1_part_012);
                 else if (tileList[i].equals("12"))
-                    button.setBackgroundResource(R.drawable.image_part_013);
+                    button.setBackgroundResource(R.drawable.anime1_part_013);
                 else if (tileList[i].equals("13"))
-                    button.setBackgroundResource(R.drawable.image_part_014);
+                    button.setBackgroundResource(R.drawable.anime1_part_014);
                 else if (tileList[i].equals("14"))
-                    button.setBackgroundResource(R.drawable.image_part_015);
+                    button.setBackgroundResource(R.drawable.anime1_part_015);
                 else if (tileList[i].equals("15"))
-                    button.setBackgroundResource(R.drawable.image_part_016);
+                    button.setBackgroundResource(R.drawable.anime1_part_016);
                 else if (tileList[i].equals("16"))
-                    button.setBackgroundResource(R.drawable.image_part_017);
+                    button.setBackgroundResource(R.drawable.anime1_part_017);
                 else if (tileList[i].equals("17"))
-                    button.setBackgroundResource(R.drawable.image_part_018);
+                    button.setBackgroundResource(R.drawable.anime1_part_018);
                 else if (tileList[i].equals("18"))
-                    button.setBackgroundResource(R.drawable.image_part_019);
+                    button.setBackgroundResource(R.drawable.anime1_part_019);
                 else if (tileList[i].equals("19"))
-                    button.setBackgroundResource(R.drawable.image_part_020);
+                    button.setBackgroundResource(R.drawable.anime1_part_020);
                 else if (tileList[i].equals("20"))
-                    button.setBackgroundResource(R.drawable.image_part_021);
+                    button.setBackgroundResource(R.drawable.anime1_part_021);
                 else if (tileList[i].equals("21"))
-                    button.setBackgroundResource(R.drawable.image_part_022);
+                    button.setBackgroundResource(R.drawable.anime1_part_022);
                 else if (tileList[i].equals("22"))
-                    button.setBackgroundResource(R.drawable.image_part_023);
+                    button.setBackgroundResource(R.drawable.anime1_part_023);
                 else if (tileList[i].equals("23"))
-                    button.setBackgroundResource(R.drawable.image_part_024);
+                    button.setBackgroundResource(R.drawable.anime1_part_024);
                 else if (tileList[i].equals("24"))
-                    button.setBackgroundResource(R.drawable.image_part_025);
+                    button.setBackgroundResource(R.drawable.anime1_part_025);
             }
 
             buttons.add(button);
