@@ -79,15 +79,39 @@ public class MainActivity extends AppCompatActivity {
         Random random = new Random();
 
         //add debug scramble
+        String p18 = tileList[18]; //18
+        String p19 = tileList[19]; //19
+        String p23 = tileList[23]; //23
 
-        //valkoinen pala aina viimeinen
+        if(Settings.debugMode) {
+            for (int i = 0; i < tileList.length - 1; i++){
 
-        for (int i = tileList.length - 1; i > 0; i--) {
 
-            index = random.nextInt(i + 1);
-            temp = tileList[index];
-            tileList[index] = tileList[i];
-            tileList[i] = temp;
+
+                if(i == 18){ //23 tiili (22) matches
+
+                    tileList[i] = p23;
+
+                } else if (i == 19){ //24 tiili (23 matches)
+
+                    tileList[i] = p18;
+
+                } else if (i == 23){
+
+                    tileList[i] = p19;
+                }
+            }
+
+            //valkoinen pala aina viimeinen
+
+        } else {
+            for (int i = tileList.length - 1; i > 0; i--) {
+
+                index = random.nextInt(i + 1);
+                temp = tileList[index];
+                tileList[index] = tileList[i];
+                tileList[i] = temp;
+            }
         }
     }
 
