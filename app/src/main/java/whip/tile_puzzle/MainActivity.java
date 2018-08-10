@@ -1,10 +1,19 @@
 package whip.tile_puzzle;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.Icon;
+import android.support.v4.app.DialogFragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.Button;
@@ -30,12 +39,36 @@ public class MainActivity extends AppCompatActivity {
     public static final String left = "left";
     public static final String right = "right";
 
+    public static int buttonId;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.menu_main, menu);
         return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()){
+            case R.id.action_settings:
+                Toast.makeText(MainActivity.this, "You have clicked on setting" +
+                        "action menu", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, Options.class));
+                break;
+            case R.id.action_statistics:
+                Toast.makeText(MainActivity.this, "You have clicked on statisctics" +
+                        "action menu", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.action_about:
+                Toast.makeText(MainActivity.this, "You have clicked on about" +
+                        "action menu", Toast.LENGTH_SHORT).show();
+                break;
+        }
+
+
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -231,58 +264,59 @@ public class MainActivity extends AppCompatActivity {
                 else if (tileList[i].equals("24"))
                     button.setBackgroundResource(R.drawable.image_part_025);
 
-            } else if (Settings.Image == 1){
+            } else if (Settings.Image == 3){
 
                 if (tileList[i].equals("0"))
-                    button.setBackgroundResource(R.drawable.anime1_part_001);
+                    button.setBackgroundResource(R.drawable.automaatti_part_001);
                 else if (tileList[i].equals("1"))
-                    button.setBackgroundResource(R.drawable.anime1_part_002);
+                    button.setBackgroundResource(R.drawable.automaatti_part_002);
                 else if (tileList[i].equals("2"))
-                    button.setBackgroundResource(R.drawable.anime1_part_003);
+                    button.setBackgroundResource(R.drawable.automaatti_part_003);
                 else if (tileList[i].equals("3"))
-                    button.setBackgroundResource(R.drawable.anime1_part_004);
+                    button.setBackgroundResource(R.drawable.automaatti_part_004);
                 else if (tileList[i].equals("4"))
-                    button.setBackgroundResource(R.drawable.anime1_part_005);
+                    button.setBackgroundResource(R.drawable.automaatti_part_005);
                 else if (tileList[i].equals("5"))
-                    button.setBackgroundResource(R.drawable.anime1_part_006);
+                    button.setBackgroundResource(R.drawable.automaatti_part_006);
                 else if (tileList[i].equals("6"))
-                    button.setBackgroundResource(R.drawable.anime1_part_007);
+                    button.setBackgroundResource(R.drawable.automaatti_part_007);
                 else if (tileList[i].equals("7"))
-                    button.setBackgroundResource(R.drawable.anime1_part_008);
+                    button.setBackgroundResource(R.drawable.automaatti_part_008);
                 else if (tileList[i].equals("8"))
-                    button.setBackgroundResource(R.drawable.anime1_part_009);
+                    button.setBackgroundResource(R.drawable.automaatti_part_009);
                 else if (tileList[i].equals("9"))
-                    button.setBackgroundResource(R.drawable.anime1_part_010);
+                    button.setBackgroundResource(R.drawable.automaatti_part_010);
                 else if (tileList[i].equals("10"))
-                    button.setBackgroundResource(R.drawable.anime1_part_011);
+                    button.setBackgroundResource(R.drawable.automaatti_part_011);
                 else if (tileList[i].equals("11"))
-                    button.setBackgroundResource(R.drawable.anime1_part_012);
+                    button.setBackgroundResource(R.drawable.automaatti_part_012);
                 else if (tileList[i].equals("12"))
-                    button.setBackgroundResource(R.drawable.anime1_part_013);
+                    button.setBackgroundResource(R.drawable.automaatti_part_013);
                 else if (tileList[i].equals("13"))
-                    button.setBackgroundResource(R.drawable.anime1_part_014);
+                    button.setBackgroundResource(R.drawable.automaatti_part_014);
                 else if (tileList[i].equals("14"))
-                    button.setBackgroundResource(R.drawable.anime1_part_015);
+                    button.setBackgroundResource(R.drawable.automaatti_part_015);
                 else if (tileList[i].equals("15"))
-                    button.setBackgroundResource(R.drawable.anime1_part_016);
+                    button.setBackgroundResource(R.drawable.automaatti_part_016);
                 else if (tileList[i].equals("16"))
-                    button.setBackgroundResource(R.drawable.anime1_part_017);
+                    button.setBackgroundResource(R.drawable.automaatti_part_017);
                 else if (tileList[i].equals("17"))
-                    button.setBackgroundResource(R.drawable.anime1_part_018);
+                    button.setBackgroundResource(R.drawable.automaatti_part_018);
                 else if (tileList[i].equals("18"))
-                    button.setBackgroundResource(R.drawable.anime1_part_019);
+                    button.setBackgroundResource(R.drawable.automaatti_part_019);
                 else if (tileList[i].equals("19"))
-                    button.setBackgroundResource(R.drawable.anime1_part_020);
+                    button.setBackgroundResource(R.drawable.automaatti_part_020);
                 else if (tileList[i].equals("20"))
-                    button.setBackgroundResource(R.drawable.anime1_part_021);
+                    button.setBackgroundResource(R.drawable.automaatti_part_021);
                 else if (tileList[i].equals("21"))
-                    button.setBackgroundResource(R.drawable.anime1_part_022);
+                    button.setBackgroundResource(R.drawable.automaatti_part_022);
                 else if (tileList[i].equals("22"))
-                    button.setBackgroundResource(R.drawable.anime1_part_023);
+                    button.setBackgroundResource(R.drawable.automaatti_part_023);
                 else if (tileList[i].equals("23"))
-                    button.setBackgroundResource(R.drawable.anime1_part_024);
+                    button.setBackgroundResource(R.drawable.automaatti_part_024);
                 else if (tileList[i].equals("24"))
-                    button.setBackgroundResource(R.drawable.anime1_part_025);
+                    button.setBackgroundResource(R.drawable.automaatti_part_025);
+
             }
 
             buttons.add(button);
@@ -294,6 +328,18 @@ public class MainActivity extends AppCompatActivity {
 
     private static int getLocation(String tile){
         return Arrays.asList(tileList).indexOf(tile);
+    }
+
+    public static boolean gameStatus(){
+
+        if(getLocation("24") != 24)
+            return false;
+
+        for(int i = 0; i < tileList.length; i++){
+            if(tileList[i] != Integer.toString(i))
+                return false;
+        }
+        return true;
     }
 
     private static void swap(Context context, int currentPosition, int swap){
@@ -314,9 +360,32 @@ public class MainActivity extends AppCompatActivity {
             tileList[currentPosition + swap] = tileList[currentPosition];
             tileList[currentPosition] = newPosition;
             display(context);
+
+            if(gameStatus())
+                alertDialogShow(context);
         }
 
     }
+
+
+    public static void alertDialogShow(Context context)
+    {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+
+        // 2. Chain together various setter methods to set the dialog characteristics
+        Drawable i = context.getDrawable(R.drawable.ic_clear_black_24dp);
+        builder.setMessage("Won") //stats here as message
+                .setTitle("you wonned").setPositiveButtonIcon(i);
+
+        // 3. Get the AlertDialog from create()
+        AlertDialog dialog = builder.create();
+
+
+        //Näytä iso kuva lopuksi?
+        // 4. Show the dialog
+        dialog.show();
+    }
+
 
     public static void moveTiles2(Context context, int position){
 
@@ -333,6 +402,7 @@ public class MainActivity extends AppCompatActivity {
             swap(context, position, -5);
         else
             Toast.makeText(context, "Invalid move", Toast.LENGTH_SHORT).show();
+
 
         /*
         if (position == 0) {

@@ -4,5 +4,5 @@ public class Settings {
 
     public static boolean debugMode = true;
 
-    public static int Image = 1;
+    public static int Image = 3; //1 juhlat 2 juoma-automaatti 3 auringonlasku
 }
