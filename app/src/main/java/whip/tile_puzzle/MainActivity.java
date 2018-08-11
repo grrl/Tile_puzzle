@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static String[] tileList;
 
-    private static GestureDetectGridView m_GridView;
+    private static GestureDetectGridView m_GridView ;
 
     private static final int COLUMNS = 5;
     private static final int DIMENSIONS = COLUMNS * COLUMNS;
@@ -39,7 +39,9 @@ public class MainActivity extends AppCompatActivity {
     public static final String down = "down";
     public static final String left = "left";
     public static final String right = "right";
-    
+
+    private Button button;
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
@@ -70,11 +72,22 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
+    public static void resetGame(){
+
+        init();
+
+        scramble();
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        m_GridView = findViewById(R.id.grid);
 
         init();
 
@@ -94,8 +107,8 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    private void init(){
-        m_GridView = findViewById(R.id.grid);
+    protected static void init(){
+        //m_GridView = findViewById(R.id.grid);
 
         m_GridView.setNumColumns(COLUMNS);
 
@@ -117,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
         */
     }
 
-    private void scramble() {
+    protected static void scramble() {
         int index;
         String temp;
         Random random = new Random();
@@ -423,7 +436,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public static void moveTiles2(Context context, int position){
+    public static void moveTiles(Context context, int position){
 
         int blankTile = getLocation("24");
 
@@ -439,131 +452,7 @@ public class MainActivity extends AppCompatActivity {
         else
             Toast.makeText(context, "Invalid move", Toast.LENGTH_SHORT).show();
 
-
-        /*
-        if (position == 0) {
-
-            if (blankTile == position + 1) swap(context, position, 1);
-            else if (blankTile == position + 5) swap(context, position, COLUMNS);
-            else Toast.makeText(context, "Invalid move", Toast.LENGTH_SHORT).show();
-
-            // Upper-center tiles
-        } else if (position > 0 && position < COLUMNS - 1) {
-            if (blankTile == position - 1) swap(context, position, -1);
-            else if (blankTile == position + 5) swap(context, position, COLUMNS);
-            else if (blankTile == position + 1) swap(context, position, 1);
-            else Toast.makeText(context, "Invalid move", Toast.LENGTH_SHORT).show();
-
-            // Upper-right-corner tile
-        } else if (position == COLUMNS - 1) {
-            if (blankTile == position - 1) swap(context, position, -1);
-            else if (blankTile == position + 5) swap(context, position, COLUMNS);
-            else Toast.makeText(context, "Invalid move", Toast.LENGTH_SHORT).show();
-
-            // Left-side tiles
-        } else if (position > COLUMNS - 1 && position < DIMENSIONS - COLUMNS &&
-                position % COLUMNS == 0) {
-            if (blankTile == position - 5) swap(context, position, -COLUMNS);
-            else if (blankTile == position + 1) swap(context, position, 1);
-            else if (blankTile == position + 5) swap(context, position, COLUMNS);
-            else Toast.makeText(context, "Invalid move", Toast.LENGTH_SHORT).show();
-
-            // Right-side AND bottom-right-corner tiles
-        } else if (position == COLUMNS * 2 - 1 || position == COLUMNS * 3 - 1) {
-            if (blankTile == position - 5) swap(context, position, -COLUMNS);
-            else if (blankTile == position - 1) swap(context, position, -1);
-            else if (blankTile == position + 5) {
-
-                // Tolerates only the right-side tiles to swap downwards as opposed to the bottom-
-                // right-corner tile.
-                if (position <= DIMENSIONS - COLUMNS - 1) swap(context, position,
-                        COLUMNS);
-                else Toast.makeText(context, "Invalid move", Toast.LENGTH_SHORT).show();
-            } else Toast.makeText(context, "Invalid move", Toast.LENGTH_SHORT).show();
-
-            // Bottom-left corner tile
-        } else if (position == DIMENSIONS - COLUMNS) {
-            if (blankTile == position - 5) swap(context, position, -COLUMNS);
-            else if (blankTile == position + 1) swap(context, position, 1);
-            else Toast.makeText(context, "Invalid move", Toast.LENGTH_SHORT).show();
-
-            // Bottom-center tiles
-        } else if (position < DIMENSIONS - 1 && position > DIMENSIONS - COLUMNS) {
-            if (blankTile == position - 5) swap(context, position, -COLUMNS);
-            else if (blankTile == position - 1) swap(context, position, -1);
-            else if (blankTile == position + 1) swap(context, position, 1);
-            else Toast.makeText(context, "Invalid move", Toast.LENGTH_SHORT).show();
-
-            // Center tiles
-        } else {
-            if (blankTile == position - 5) swap(context, position, -COLUMNS);
-            else if (blankTile == position - 1) swap(context, position, -1);
-            else if (blankTile == position + 1) swap(context, position, 1);
-            else swap(context, position, COLUMNS);
-        }
-        */
     }
 
-    public static void moveTiles(Context context, String direction, int position){
-        if (position == 0) {
 
-            if (direction.equals(right)) swap(context, position, 1);
-            else if (direction.equals(down)) swap(context, position, COLUMNS);
-            else Toast.makeText(context, "Invalid move", Toast.LENGTH_SHORT).show();
-
-            // Upper-center tiles
-        } else if (position > 0 && position < COLUMNS - 1) {
-            if (direction.equals(left)) swap(context, position, -1);
-            else if (direction.equals(down)) swap(context, position, COLUMNS);
-            else if (direction.equals(right)) swap(context, position, 1);
-            else Toast.makeText(context, "Invalid move", Toast.LENGTH_SHORT).show();
-
-            // Upper-right-corner tile
-        } else if (position == COLUMNS - 1) {
-            if (direction.equals(left)) swap(context, position, -1);
-            else if (direction.equals(down)) swap(context, position, COLUMNS);
-            else Toast.makeText(context, "Invalid move", Toast.LENGTH_SHORT).show();
-
-            // Left-side tiles
-        } else if (position > COLUMNS - 1 && position < DIMENSIONS - COLUMNS &&
-                position % COLUMNS == 0) {
-            if (direction.equals(up)) swap(context, position, -COLUMNS);
-            else if (direction.equals(right)) swap(context, position, 1);
-            else if (direction.equals(down)) swap(context, position, COLUMNS);
-            else Toast.makeText(context, "Invalid move", Toast.LENGTH_SHORT).show();
-
-            // Right-side AND bottom-right-corner tiles
-        } else if (position == COLUMNS * 2 - 1 || position == COLUMNS * 3 - 1) {
-            if (direction.equals(up)) swap(context, position, -COLUMNS);
-            else if (direction.equals(left)) swap(context, position, -1);
-            else if (direction.equals(down)) {
-
-                // Tolerates only the right-side tiles to swap downwards as opposed to the bottom-
-                // right-corner tile.
-                if (position <= DIMENSIONS - COLUMNS - 1) swap(context, position,
-                        COLUMNS);
-                else Toast.makeText(context, "Invalid move", Toast.LENGTH_SHORT).show();
-            } else Toast.makeText(context, "Invalid move", Toast.LENGTH_SHORT).show();
-
-            // Bottom-left corner tile
-        } else if (position == DIMENSIONS - COLUMNS) {
-            if (direction.equals(up)) swap(context, position, -COLUMNS);
-            else if (direction.equals(right)) swap(context, position, 1);
-            else Toast.makeText(context, "Invalid move", Toast.LENGTH_SHORT).show();
-
-            // Bottom-center tiles
-        } else if (position < DIMENSIONS - 1 && position > DIMENSIONS - COLUMNS) {
-            if (direction.equals(up)) swap(context, position, -COLUMNS);
-            else if (direction.equals(left)) swap(context, position, -1);
-            else if (direction.equals(right)) swap(context, position, 1);
-            else Toast.makeText(context, "Invalid move", Toast.LENGTH_SHORT).show();
-
-            // Center tiles
-        } else {
-            if (direction.equals(up)) swap(context, position, -COLUMNS);
-            else if (direction.equals(left)) swap(context, position, -1);
-            else if (direction.equals(right)) swap(context, position, 1);
-            else swap(context, position, COLUMNS);
-        }
-    }
 }
