@@ -3,6 +3,7 @@ package whip.tile_puzzle;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.Icon;
@@ -38,9 +39,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String down = "down";
     public static final String left = "left";
     public static final String right = "right";
-
-    public static int buttonId;
-
+    
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
@@ -84,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
         setDimensions();
 
     }
+
 
     private View.OnClickListener tileListener = new View.OnClickListener() {
         @Override
@@ -363,6 +363,7 @@ public class MainActivity extends AppCompatActivity {
 
             if(gameStatus())
                 alertDialogShow(context);
+
         }
 
     }
@@ -380,10 +381,45 @@ public class MainActivity extends AppCompatActivity {
         // 3. Get the AlertDialog from create()
         AlertDialog dialog = builder.create();
 
-
+        Settings.playGame = false;
         //Näytä iso kuva lopuksi?
         // 4. Show the dialog
+        setSharedPreferences(context);
+
         dialog.show();
+    }
+
+    /*
+    public void storeWins(){
+        SharedPreferences m_sharedPreferences = getSharedPreferences("Wins", MODE_PRIVATE);
+        SharedPreferences.Editor m_editor = m_sharedPreferences.edit();
+        m_editor.putInt("WinAmount", getWins() + 1);
+        m_editor.apply();
+    }
+
+    public static int getWins(){
+        SharedPreferences m_sharedPreferences = getSharedPreferences(Context ctx)
+        int i = m_sharedPreferences.getInt("WinAmount", 0);
+        return i;
+    }
+    */
+
+    public static void setSharedPreferences (Context ctx){
+        SharedPreferences m_sharedPreferences = getSharedPreferences(ctx);
+        SharedPreferences.Editor m_editor = m_sharedPreferences.edit();
+        m_editor.putInt("WinAmount", getWins(m_sharedPreferences) + 1);
+        m_editor.apply();
+        System.out.println("Voitot " + getWins(m_sharedPreferences));
+    }
+
+    public static int getWins(SharedPreferences p){
+        return p.getInt("WinAmount", 0);
+
+    }
+
+    public static SharedPreferences getSharedPreferences(Context ctx){
+
+        return ctx.getSharedPreferences("Wins", 0);
     }
 
 

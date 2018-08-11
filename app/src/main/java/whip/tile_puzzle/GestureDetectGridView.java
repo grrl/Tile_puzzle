@@ -2,6 +2,8 @@ package whip.tile_puzzle;
 
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.GestureDetector;
@@ -57,6 +59,10 @@ public class GestureDetectGridView extends GridView {
 
             @Override
             public boolean onSingleTapUp(MotionEvent e1) {
+
+                if(!Settings.playGame) {
+                    return false;
+                }
 
                 final int position = GestureDetectGridView.this.pointToPosition
                         (Math.round(e1.getX()), Math.round(e1.getY()));
