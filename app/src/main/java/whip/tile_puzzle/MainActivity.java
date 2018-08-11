@@ -20,8 +20,10 @@ import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.Toast;
 
+import java.net.ConnectException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
@@ -61,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_statistics:
                 Toast.makeText(MainActivity.this, "You have clicked on statisctics" +
                         "action menu", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, Statistics.class));
                 break;
             case R.id.action_about:
                 Toast.makeText(MainActivity.this, "You have clicked on about" +
@@ -89,12 +92,25 @@ public class MainActivity extends AppCompatActivity {
 
         m_GridView = findViewById(R.id.grid);
 
+        //set datetime if first time
+        getDate(this);
+
         init();
 
         scramble();
 
         setDimensions();
 
+    }
+
+    private void getDate(Context context){
+
+        SharedPreferences m_sharedPreferences = getSharedPreferences(context);
+
+        if(getDateTime(m_sharedPreferences) == 0)
+            setDateSharedPreferences(context);
+
+        System.out.println("daato" + getDateTime(m_sharedPreferences));
     }
 
 
@@ -417,6 +433,8 @@ public class MainActivity extends AppCompatActivity {
     }
     */
 
+
+    //Sharedpreference wins setter
     public static void setSharedPreferences (Context ctx){
         SharedPreferences m_sharedPreferences = getSharedPreferences(ctx);
         SharedPreferences.Editor m_editor = m_sharedPreferences.edit();
@@ -425,16 +443,32 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("Voitot " + getWins(m_sharedPreferences));
     }
 
+    //Sharedpreference get wins
     public static int getWins(SharedPreferences p){
         return p.getInt("WinAmount", 0);
 
     }
 
+    //Sharedpreference wins SharedPreference
     public static SharedPreferences getSharedPreferences(Context ctx){
 
-        return ctx.getSharedPreferences("Wins", 0);
+        return ctx.getSharedPreferences("p", 0);
     }
 
+
+    //Sharedpreference Date setter
+    private void setDateSharedPreferences(Context ctx){
+        SharedPreferences m_sharedPreferences = getSharedPreferences(ctx);
+        SharedPreferences.Editor m_editor = m_sharedPreferences.edit();
+        m_editor.putLong("DateTime", System.currentTimeMillis());
+        m_editor.apply();
+        System.out.println("Voitot " + getWins(m_sharedPreferences));
+    }
+
+    //Sharedpreference get starting date
+    public static long getDateTime(SharedPreferences p){
+        return p.getLong("DateTime", 0);
+    }
 
     public static void moveTiles(Context context, int position){
 
