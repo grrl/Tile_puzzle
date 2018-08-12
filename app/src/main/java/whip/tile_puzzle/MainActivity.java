@@ -25,6 +25,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
     public static final String down = "down";
     public static final String left = "left";
     public static final String right = "right";
+    public static Timer timer;
+    public static int second = 0;
 
     private Button button;
 
@@ -82,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
 
         scramble();
 
+        Settings.gameTurns = 0;
     }
 
     @Override
@@ -390,9 +395,26 @@ public class MainActivity extends AppCompatActivity {
             tileList[currentPosition] = newPosition;
             display(context);
 
-            if(gameStatus())
-                alertDialogShow(context);
+            Settings.gameTurns++;
 
+            if(Settings.gameTurns == 1){
+                timer =new Timer();
+                timer.scheduleAtFixedRate(new TimerTask() {
+                    @Override
+                    public void run() {
+                        System.out.println(second);
+                        second++;
+                    }
+                }, 1000, 1000);
+
+            }
+
+            setTurnsSharedPreferences(context);
+
+            if(gameStatus()) {
+                timer.cancel();
+                alertDialogShow(context);
+            }
         }
 
     }
@@ -404,7 +426,7 @@ public class MainActivity extends AppCompatActivity {
 
         // 2. Chain together various setter methods to set the dialog characteristics
         Drawable i = context.getDrawable(R.drawable.ic_clear_black_24dp);
-        builder.setMessage("Won") //stats here as message
+        builder.setMessage("Won " + Settings.gameTurns + " time " + getTimeAndReset()) //stats here as message
                 .setTitle("you wonned").setPositiveButtonIcon(i);
 
         // 3. Get the AlertDialog from create()
@@ -416,6 +438,18 @@ public class MainActivity extends AppCompatActivity {
         setSharedPreferences(context);
 
         dialog.show();
+    }
+
+    public static String getTimeAndReset(){
+        int min = Math.round(second / 60);
+
+        int sec = second - (60 * min);
+
+        second = 0;
+
+        Settings.gameTurns = 0;
+
+        return min + " min " + sec + " seconds";
     }
 
     /*
@@ -448,6 +482,21 @@ public class MainActivity extends AppCompatActivity {
         return p.getInt("WinAmount", 0);
 
     }
+
+    //SharedPreference turns setter
+    public static void setTurnsSharedPreferences (Context ctx){
+        SharedPreferences m_sharedPreferences = getSharedPreferences(ctx);
+        SharedPreferences.Editor m_editor = m_sharedPreferences.edit();
+        m_editor.putInt("TurnsAmount", getTurns(m_sharedPreferences) + 1);
+        m_editor.apply();
+    }
+
+    //SharedPreference turns getter
+
+    public static int getTurns(SharedPreferences p){
+        return p.getInt("TurnsAmount", 0);
+    }
+
 
     //Sharedpreference wins SharedPreference
     public static SharedPreferences getSharedPreferences(Context ctx){

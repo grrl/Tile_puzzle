@@ -19,7 +19,8 @@
         </activity>
         <activity android:name=".Options" />
         <activity android:name=".About" />
-        <activity android:name=".Statistics"></activity>
+        <activity android:name=".Statistics"
+            android:label="Statistics"/>
     </application>
 
 </manifest>

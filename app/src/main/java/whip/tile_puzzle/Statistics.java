@@ -2,7 +2,6 @@ package whip.tile_puzzle;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.preference.TwoStatePreference;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -12,12 +11,14 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import static whip.tile_puzzle.MainActivity.getDateTime;
+import static whip.tile_puzzle.MainActivity.getTurns;
 import static whip.tile_puzzle.MainActivity.getWins;
 
 public class Statistics extends AppCompatActivity {
 
     private TextView wins;
     private TextView date;
+    private TextView turns;
     private long startingLong;
     private Date startingDate;
     private SharedPreferences m_sharedPreferences;
@@ -39,7 +40,13 @@ public class Statistics extends AppCompatActivity {
         startingDate = new Date(startingLong);
         String reportDate = df.format(startingDate);
         System.out.println(reportDate);
+
+        turns = (TextView) findViewById(R.id.turnsVar);
+        turns.setText(Integer.toString(showTurns(this)));
+
         date.setText(reportDate);
+
+
     }
 
     private int showWins(Context context){
@@ -50,5 +57,10 @@ public class Statistics extends AppCompatActivity {
     private long getDate(Context context){
         m_sharedPreferences = MainActivity.getSharedPreferences(context);
         return getDateTime(m_sharedPreferences);
+    }
+
+    private int showTurns(Context context){
+        m_sharedPreferences = MainActivity.getSharedPreferences(context);
+        return getTurns(m_sharedPreferences);
     }
 }

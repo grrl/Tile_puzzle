@@ -9,4 +9,6 @@ public class Settings {
     //make string array for R.drawable.images
 
     public static boolean playGame = true;
+
+    public static int gameTurns = 0;
 }
