@@ -162,8 +162,11 @@ public class MainActivity extends AppCompatActivity {
 
         //add debug scramble
         String p18 = tileList[18]; //18
+        System.out.println("p18 " + p18);
         String p19 = tileList[19]; //19
+        System.out.println("p19 " + p19);
         String p23 = tileList[23]; //23
+        System.out.println("p23 " + p23);
 
         if(Settings.debugMode) {
             for (int i = 0; i < tileList.length - 1; i++){
@@ -245,64 +248,12 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<Button> buttons = new ArrayList<>();
         Button button;
 
+
         for (int i = 0; i<tileList.length; i++){
 
             button = new Button(context);
 
             if(Settings.Image == 0) {
-
-                if (tileList[i].equals("0"))
-                    button.setBackgroundResource(R.drawable.image_part_001);
-                else if (tileList[i].equals("1"))
-                    button.setBackgroundResource(R.drawable.image_part_002);
-                else if (tileList[i].equals("2"))
-                    button.setBackgroundResource(R.drawable.image_part_003);
-                else if (tileList[i].equals("3"))
-                    button.setBackgroundResource(R.drawable.image_part_004);
-                else if (tileList[i].equals("4"))
-                    button.setBackgroundResource(R.drawable.image_part_005);
-                else if (tileList[i].equals("5"))
-                    button.setBackgroundResource(R.drawable.image_part_006);
-                else if (tileList[i].equals("6"))
-                    button.setBackgroundResource(R.drawable.image_part_007);
-                else if (tileList[i].equals("7"))
-                    button.setBackgroundResource(R.drawable.image_part_008);
-                else if (tileList[i].equals("8"))
-                    button.setBackgroundResource(R.drawable.image_part_009);
-                else if (tileList[i].equals("9"))
-                    button.setBackgroundResource(R.drawable.image_part_010);
-                else if (tileList[i].equals("10"))
-                    button.setBackgroundResource(R.drawable.image_part_011);
-                else if (tileList[i].equals("11"))
-                    button.setBackgroundResource(R.drawable.image_part_012);
-                else if (tileList[i].equals("12"))
-                    button.setBackgroundResource(R.drawable.image_part_013);
-                else if (tileList[i].equals("13"))
-                    button.setBackgroundResource(R.drawable.image_part_014);
-                else if (tileList[i].equals("14"))
-                    button.setBackgroundResource(R.drawable.image_part_015);
-                else if (tileList[i].equals("15"))
-                    button.setBackgroundResource(R.drawable.image_part_016);
-                else if (tileList[i].equals("16"))
-                    button.setBackgroundResource(R.drawable.image_part_017);
-                else if (tileList[i].equals("17"))
-                    button.setBackgroundResource(R.drawable.image_part_018);
-                else if (tileList[i].equals("18"))
-                    button.setBackgroundResource(R.drawable.image_part_019);
-                else if (tileList[i].equals("19"))
-                    button.setBackgroundResource(R.drawable.image_part_020);
-                else if (tileList[i].equals("20"))
-                    button.setBackgroundResource(R.drawable.image_part_021);
-                else if (tileList[i].equals("21"))
-                    button.setBackgroundResource(R.drawable.image_part_022);
-                else if (tileList[i].equals("22"))
-                    button.setBackgroundResource(R.drawable.image_part_023);
-                else if (tileList[i].equals("23"))
-                    button.setBackgroundResource(R.drawable.image_part_024);
-                else if (tileList[i].equals("24"))
-                    button.setBackgroundResource(R.drawable.image_part_025);
-
-            } else if (Settings.Image == 3){
 
                 if (tileList[i].equals("0"))
                     button.setBackgroundResource(R.drawable.automaatti_part_001);
