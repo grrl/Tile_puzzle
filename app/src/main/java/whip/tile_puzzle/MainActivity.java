@@ -144,15 +144,6 @@ public class MainActivity extends AppCompatActivity {
             tileList[i] = String.valueOf(i);
         }
 
-        /*
-        int k = 0;
-        for (int i = 0; i <= 4; i++){
-            for(int j = 0; i <= 4; j++) {
-                tileList[i][j] = [i][j];
-                k++;
-            }
-        }
-        */
     }
 
     protected static void scramble() {
@@ -200,15 +191,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-        /*
-        for (int i = tileList - 1; i > 0; i--) {
-            index = random.nextInt(i + 1);
-            System.out.println("Arvotaan " + index);
-            temp = tileList[index];
-            tileList[index] = tileList[i];
-            tileList[i] = temp;
-        }
-        */
+
 
 
     private int getStatusBarHeight(Context context) {
@@ -450,21 +433,6 @@ public class MainActivity extends AppCompatActivity {
 
         return min + " min " + sec + " seconds";
     }
-
-    /*
-    public void storeWins(){
-        SharedPreferences m_sharedPreferences = getSharedPreferences("Wins", MODE_PRIVATE);
-        SharedPreferences.Editor m_editor = m_sharedPreferences.edit();
-        m_editor.putInt("WinAmount", getWins() + 1);
-        m_editor.apply();
-    }
-
-    public static int getWins(){
-        SharedPreferences m_sharedPreferences = getSharedPreferences(Context ctx)
-        int i = m_sharedPreferences.getInt("WinAmount", 0);
-        return i;
-    }
-    */
 
 
     //Sharedpreference wins setter
