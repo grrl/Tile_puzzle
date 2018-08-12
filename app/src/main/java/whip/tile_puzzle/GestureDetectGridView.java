@@ -79,7 +79,7 @@ public class GestureDetectGridView extends GridView {
                 //return super.onSingleTapUp(e1);
                 return true;
             }
-            
+
         });
     }
 
