@@ -47,8 +47,11 @@ public class MainActivity extends AppCompatActivity {
     public static Timer timer;
     public static int second = 0;
 
+    public static MediaPlayer playerUp;
+    public static MediaPlayer playerDown;
+    public static MediaPlayer playerRight;
+    public static MediaPlayer playerLeft;
 
-    private static MediaPlayer player;
 
 
     @Override
@@ -99,6 +102,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         m_GridView = findViewById(R.id.grid);
+
+        //soundplayers
+        playerUp = MediaPlayer.create(this, R.raw.soundup);
+        playerDown = MediaPlayer.create(this, R.raw.sounddown);
+        playerRight = MediaPlayer.create(this, R.raw.soundright);
+        playerLeft = MediaPlayer.create(this, R.raw.soundleft);
 
         //set datetime if first time
         getDate(this);
@@ -397,6 +406,57 @@ public class MainActivity extends AppCompatActivity {
 
             } else if (Settings.Image == 3){
 
+                if (tileList[i].equals("0"))
+                    button.setBackgroundResource(R.drawable.asema_part_001);
+                else if (tileList[i].equals("1"))
+                    button.setBackgroundResource(R.drawable.asema_part_002);
+                else if (tileList[i].equals("2"))
+                    button.setBackgroundResource(R.drawable.asema_part_003);
+                else if (tileList[i].equals("3"))
+                    button.setBackgroundResource(R.drawable.asema_part_004);
+                else if (tileList[i].equals("4"))
+                    button.setBackgroundResource(R.drawable.asema_part_005);
+                else if (tileList[i].equals("5"))
+                    button.setBackgroundResource(R.drawable.asema_part_006);
+                else if (tileList[i].equals("6"))
+                    button.setBackgroundResource(R.drawable.asema_part_007);
+                else if (tileList[i].equals("7"))
+                    button.setBackgroundResource(R.drawable.asema_part_008);
+                else if (tileList[i].equals("8"))
+                    button.setBackgroundResource(R.drawable.asema_part_009);
+                else if (tileList[i].equals("9"))
+                    button.setBackgroundResource(R.drawable.asema_part_010);
+                else if (tileList[i].equals("10"))
+                    button.setBackgroundResource(R.drawable.asema_part_011);
+                else if (tileList[i].equals("11"))
+                    button.setBackgroundResource(R.drawable.asema_part_012);
+                else if (tileList[i].equals("12"))
+                    button.setBackgroundResource(R.drawable.asema_part_013);
+                else if (tileList[i].equals("13"))
+                    button.setBackgroundResource(R.drawable.asema_part_014);
+                else if (tileList[i].equals("14"))
+                    button.setBackgroundResource(R.drawable.asema_part_015);
+                else if (tileList[i].equals("15"))
+                    button.setBackgroundResource(R.drawable.asema_part_016);
+                else if (tileList[i].equals("16"))
+                    button.setBackgroundResource(R.drawable.asema_part_017);
+                else if (tileList[i].equals("17"))
+                    button.setBackgroundResource(R.drawable.asema_part_018);
+                else if (tileList[i].equals("18"))
+                    button.setBackgroundResource(R.drawable.asema_part_019);
+                else if (tileList[i].equals("19"))
+                    button.setBackgroundResource(R.drawable.asema_part_020);
+                else if (tileList[i].equals("20"))
+                    button.setBackgroundResource(R.drawable.asema_part_021);
+                else if (tileList[i].equals("21"))
+                    button.setBackgroundResource(R.drawable.asema_part_022);
+                else if (tileList[i].equals("22"))
+                    button.setBackgroundResource(R.drawable.asema_part_023);
+                else if (tileList[i].equals("23"))
+                    button.setBackgroundResource(R.drawable.asema_part_024);
+                else if (tileList[i].equals("24"))
+                    button.setBackgroundResource(R.drawable.asema_part_025);
+
             } else if (Settings.Image == 4){
 
             } else if (Settings.Image == 5){
@@ -452,39 +512,23 @@ public class MainActivity extends AppCompatActivity {
             System.out.println("päällä " + getSoundandReturn(m_sharedPreferences));
             if(getSoundandReturn(m_sharedPreferences)) { //jos ääni päällä
                 if (currentPosition == posAbove) {
-                    if (player != null) {
-                        player.release();
-                        player = null;
-                    }
-                    player = MediaPlayer.create(context, R.raw.sounddown);
-                    player.start();
+
+                    playerDown.start();
                     System.out.println("playing down");
 
                 } else if (currentPosition == posBelow) {
-                    if (player != null) {
-                        player.release();
-                        player = null;
-                    }
-                    player = MediaPlayer.create(context, R.raw.soundup);
-                    player.start();
+
+                    playerUp.start();
                     System.out.println("playing up");
 
                 } else if (currentPosition == posRight) {
-                    if (player != null) {
-                        player.release();
-                        player = null;
-                    }
-                    player = MediaPlayer.create(context, R.raw.soundleft);
-                    player.start();
+
+                    playerLeft.start();
                     System.out.println("playing left");
 
                 } else {
-                    if (player != null) {
-                        player.release();
-                        player = null;
-                    }
-                    player = MediaPlayer.create(context, R.raw.soundright);
-                    player.start();
+
+                    playerRight.start();
                     System.out.println("playing right");
 
                 }

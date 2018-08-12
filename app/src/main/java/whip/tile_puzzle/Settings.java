@@ -4,7 +4,7 @@ public class Settings {
 
     public static boolean debugMode = true;
 
-    public static int Image = 2; //0 juoma automaatti
+    public static int Image = 3; //0 juoma automaatti
 
     //make string array for R.drawable.images
 
