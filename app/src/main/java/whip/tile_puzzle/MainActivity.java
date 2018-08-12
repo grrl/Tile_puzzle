@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.Icon;
+import android.media.MediaPlayer;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AlertDialog;
@@ -46,7 +47,9 @@ public class MainActivity extends AppCompatActivity {
     public static Timer timer;
     public static int second = 0;
 
-    private Button button;
+
+    private static MediaPlayer player;
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -105,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
         scramble();
 
         setDimensions();
+
 
     }
 
@@ -390,6 +394,50 @@ public class MainActivity extends AppCompatActivity {
         if(currentPosition == posAbove || currentPosition == posBelow ||
                 currentPosition == posRight || currentPosition == posLeft) {
 
+            SharedPreferences m_sharedPreferences = getSharedPreferences(context);
+
+
+            System.out.println("päällä " + getSoundandReturn(m_sharedPreferences));
+            if(getSoundandReturn(m_sharedPreferences)) { //jos ääni päällä
+                if (currentPosition == posAbove) {
+                    if (player != null) {
+                        player.release();
+                        player = null;
+                    }
+                    player = MediaPlayer.create(context, R.raw.sounddown);
+                    player.start();
+                    System.out.println("playing down");
+
+                } else if (currentPosition == posBelow) {
+                    if (player != null) {
+                        player.release();
+                        player = null;
+                    }
+                    player = MediaPlayer.create(context, R.raw.soundup);
+                    player.start();
+                    System.out.println("playing up");
+
+                } else if (currentPosition == posRight) {
+                    if (player != null) {
+                        player.release();
+                        player = null;
+                    }
+                    player = MediaPlayer.create(context, R.raw.soundleft);
+                    player.start();
+                    System.out.println("playing left");
+
+                } else {
+                    if (player != null) {
+                        player.release();
+                        player = null;
+                    }
+                    player = MediaPlayer.create(context, R.raw.soundright);
+                    player.start();
+                    System.out.println("playing right");
+
+                }
+            }
+
             String newPosition = tileList[currentPosition + swap];
             tileList[currentPosition + swap] = tileList[currentPosition];
             tileList[currentPosition] = newPosition;
@@ -402,7 +450,7 @@ public class MainActivity extends AppCompatActivity {
                 timer.scheduleAtFixedRate(new TimerTask() {
                     @Override
                     public void run() {
-                        System.out.println(second);
+                        //System.out.println(second);
                         second++;
                     }
                 }, 1000, 1000);

@@ -50,6 +50,8 @@ public class Options extends AppCompatActivity {
 
         if(getSound(this))
             radioGroup.check(R.id.soundOn);
+        else
+            radioGroup.check(R.id.soundOff);
 
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -90,7 +92,7 @@ public class Options extends AppCompatActivity {
     }
 
     private void setSound(boolean bool){
-        setSoundSharedPreferences(this, false);
+        setSoundSharedPreferences(this, bool);
     }
 
 }
