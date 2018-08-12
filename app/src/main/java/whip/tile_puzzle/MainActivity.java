@@ -511,13 +511,26 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences.Editor m_editor = m_sharedPreferences.edit();
         m_editor.putLong("DateTime", System.currentTimeMillis());
         m_editor.apply();
-        System.out.println("Voitot " + getWins(m_sharedPreferences));
     }
 
     //Sharedpreference get starting date
     public static long getDateTime(SharedPreferences p){
         return p.getLong("DateTime", 0);
     }
+
+    //Sharedpreference sound setter
+    public static void setSoundSharedPreferences(Context ctx, boolean bool){
+        SharedPreferences m_sharedPreferences = getSharedPreferences(ctx);
+        SharedPreferences.Editor m_editor = m_sharedPreferences.edit();
+        m_editor.putBoolean("Sound", bool);
+        m_editor.apply();
+    }
+    //Sharedpreference sound getter
+
+    public static boolean getSoundandReturn(SharedPreferences p){
+        return p.getBoolean("Sound", false);
+    }
+
 
     public static void moveTiles(Context context, int position){
 
