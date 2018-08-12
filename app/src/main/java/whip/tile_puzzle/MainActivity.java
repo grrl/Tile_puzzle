@@ -459,13 +459,268 @@ public class MainActivity extends AppCompatActivity {
 
             } else if (Settings.Image == 4){
 
+                if (tileList[i].equals("0"))
+                    button.setBackgroundResource(R.drawable.sarariman_part_001);
+                else if (tileList[i].equals("1"))
+                    button.setBackgroundResource(R.drawable.sarariman_part_002);
+                else if (tileList[i].equals("2"))
+                    button.setBackgroundResource(R.drawable.sarariman_part_003);
+                else if (tileList[i].equals("3"))
+                    button.setBackgroundResource(R.drawable.sarariman_part_004);
+                else if (tileList[i].equals("4"))
+                    button.setBackgroundResource(R.drawable.sarariman_part_005);
+                else if (tileList[i].equals("5"))
+                    button.setBackgroundResource(R.drawable.sarariman_part_006);
+                else if (tileList[i].equals("6"))
+                    button.setBackgroundResource(R.drawable.sarariman_part_007);
+                else if (tileList[i].equals("7"))
+                    button.setBackgroundResource(R.drawable.sarariman_part_008);
+                else if (tileList[i].equals("8"))
+                    button.setBackgroundResource(R.drawable.sarariman_part_009);
+                else if (tileList[i].equals("9"))
+                    button.setBackgroundResource(R.drawable.sarariman_part_010);
+                else if (tileList[i].equals("10"))
+                    button.setBackgroundResource(R.drawable.sarariman_part_011);
+                else if (tileList[i].equals("11"))
+                    button.setBackgroundResource(R.drawable.sarariman_part_012);
+                else if (tileList[i].equals("12"))
+                    button.setBackgroundResource(R.drawable.sarariman_part_013);
+                else if (tileList[i].equals("13"))
+                    button.setBackgroundResource(R.drawable.sarariman_part_014);
+                else if (tileList[i].equals("14"))
+                    button.setBackgroundResource(R.drawable.sarariman_part_015);
+                else if (tileList[i].equals("15"))
+                    button.setBackgroundResource(R.drawable.sarariman_part_016);
+                else if (tileList[i].equals("16"))
+                    button.setBackgroundResource(R.drawable.sarariman_part_017);
+                else if (tileList[i].equals("17"))
+                    button.setBackgroundResource(R.drawable.sarariman_part_018);
+                else if (tileList[i].equals("18"))
+                    button.setBackgroundResource(R.drawable.sarariman_part_019);
+                else if (tileList[i].equals("19"))
+                    button.setBackgroundResource(R.drawable.sarariman_part_020);
+                else if (tileList[i].equals("20"))
+                    button.setBackgroundResource(R.drawable.sarariman_part_021);
+                else if (tileList[i].equals("21"))
+                    button.setBackgroundResource(R.drawable.sarariman_part_022);
+                else if (tileList[i].equals("22"))
+                    button.setBackgroundResource(R.drawable.sarariman_part_023);
+                else if (tileList[i].equals("23"))
+                    button.setBackgroundResource(R.drawable.sarariman_part_024);
+                else if (tileList[i].equals("24"))
+                    button.setBackgroundResource(R.drawable.sarariman_part_025);
+
             } else if (Settings.Image == 5){
+
+                if (tileList[i].equals("0"))
+                    button.setBackgroundResource(R.drawable.oriental_part_001);
+                else if (tileList[i].equals("1"))
+                    button.setBackgroundResource(R.drawable.oriental_part_002);
+                else if (tileList[i].equals("2"))
+                    button.setBackgroundResource(R.drawable.oriental_part_003);
+                else if (tileList[i].equals("3"))
+                    button.setBackgroundResource(R.drawable.oriental_part_004);
+                else if (tileList[i].equals("4"))
+                    button.setBackgroundResource(R.drawable.oriental_part_005);
+                else if (tileList[i].equals("5"))
+                    button.setBackgroundResource(R.drawable.oriental_part_006);
+                else if (tileList[i].equals("6"))
+                    button.setBackgroundResource(R.drawable.oriental_part_007);
+                else if (tileList[i].equals("7"))
+                    button.setBackgroundResource(R.drawable.oriental_part_008);
+                else if (tileList[i].equals("8"))
+                    button.setBackgroundResource(R.drawable.oriental_part_009);
+                else if (tileList[i].equals("9"))
+                    button.setBackgroundResource(R.drawable.oriental_part_010);
+                else if (tileList[i].equals("10"))
+                    button.setBackgroundResource(R.drawable.oriental_part_011);
+                else if (tileList[i].equals("11"))
+                    button.setBackgroundResource(R.drawable.oriental_part_012);
+                else if (tileList[i].equals("12"))
+                    button.setBackgroundResource(R.drawable.oriental_part_013);
+                else if (tileList[i].equals("13"))
+                    button.setBackgroundResource(R.drawable.oriental_part_014);
+                else if (tileList[i].equals("14"))
+                    button.setBackgroundResource(R.drawable.oriental_part_015);
+                else if (tileList[i].equals("15"))
+                    button.setBackgroundResource(R.drawable.oriental_part_016);
+                else if (tileList[i].equals("16"))
+                    button.setBackgroundResource(R.drawable.oriental_part_017);
+                else if (tileList[i].equals("17"))
+                    button.setBackgroundResource(R.drawable.oriental_part_018);
+                else if (tileList[i].equals("18"))
+                    button.setBackgroundResource(R.drawable.oriental_part_019);
+                else if (tileList[i].equals("19"))
+                    button.setBackgroundResource(R.drawable.oriental_part_020);
+                else if (tileList[i].equals("20"))
+                    button.setBackgroundResource(R.drawable.oriental_part_021);
+                else if (tileList[i].equals("21"))
+                    button.setBackgroundResource(R.drawable.oriental_part_022);
+                else if (tileList[i].equals("22"))
+                    button.setBackgroundResource(R.drawable.oriental_part_023);
+                else if (tileList[i].equals("23"))
+                    button.setBackgroundResource(R.drawable.oriental_part_024);
+                else if (tileList[i].equals("24"))
+                    button.setBackgroundResource(R.drawable.oriental_part_025);
 
             } else if (Settings.Image == 6){
 
+                if (tileList[i].equals("0"))
+                    button.setBackgroundResource(R.drawable.kukat_part_001);
+                else if (tileList[i].equals("1"))
+                    button.setBackgroundResource(R.drawable.kukat_part_002);
+                else if (tileList[i].equals("2"))
+                    button.setBackgroundResource(R.drawable.kukat_part_003);
+                else if (tileList[i].equals("3"))
+                    button.setBackgroundResource(R.drawable.kukat_part_004);
+                else if (tileList[i].equals("4"))
+                    button.setBackgroundResource(R.drawable.kukat_part_005);
+                else if (tileList[i].equals("5"))
+                    button.setBackgroundResource(R.drawable.kukat_part_006);
+                else if (tileList[i].equals("6"))
+                    button.setBackgroundResource(R.drawable.kukat_part_007);
+                else if (tileList[i].equals("7"))
+                    button.setBackgroundResource(R.drawable.kukat_part_008);
+                else if (tileList[i].equals("8"))
+                    button.setBackgroundResource(R.drawable.kukat_part_009);
+                else if (tileList[i].equals("9"))
+                    button.setBackgroundResource(R.drawable.kukat_part_010);
+                else if (tileList[i].equals("10"))
+                    button.setBackgroundResource(R.drawable.kukat_part_011);
+                else if (tileList[i].equals("11"))
+                    button.setBackgroundResource(R.drawable.kukat_part_012);
+                else if (tileList[i].equals("12"))
+                    button.setBackgroundResource(R.drawable.kukat_part_013);
+                else if (tileList[i].equals("13"))
+                    button.setBackgroundResource(R.drawable.kukat_part_014);
+                else if (tileList[i].equals("14"))
+                    button.setBackgroundResource(R.drawable.kukat_part_015);
+                else if (tileList[i].equals("15"))
+                    button.setBackgroundResource(R.drawable.kukat_part_016);
+                else if (tileList[i].equals("16"))
+                    button.setBackgroundResource(R.drawable.kukat_part_017);
+                else if (tileList[i].equals("17"))
+                    button.setBackgroundResource(R.drawable.kukat_part_018);
+                else if (tileList[i].equals("18"))
+                    button.setBackgroundResource(R.drawable.kukat_part_019);
+                else if (tileList[i].equals("19"))
+                    button.setBackgroundResource(R.drawable.kukat_part_020);
+                else if (tileList[i].equals("20"))
+                    button.setBackgroundResource(R.drawable.kukat_part_021);
+                else if (tileList[i].equals("21"))
+                    button.setBackgroundResource(R.drawable.kukat_part_022);
+                else if (tileList[i].equals("22"))
+                    button.setBackgroundResource(R.drawable.kukat_part_023);
+                else if (tileList[i].equals("23"))
+                    button.setBackgroundResource(R.drawable.kukat_part_024);
+                else if (tileList[i].equals("24"))
+                    button.setBackgroundResource(R.drawable.kukat_part_025);
+
             } else if (Settings.Image == 7){
 
+                if (tileList[i].equals("0"))
+                    button.setBackgroundResource(R.drawable.pesula_part_001);
+                else if (tileList[i].equals("1"))
+                    button.setBackgroundResource(R.drawable.pesula_part_002);
+                else if (tileList[i].equals("2"))
+                    button.setBackgroundResource(R.drawable.pesula_part_003);
+                else if (tileList[i].equals("3"))
+                    button.setBackgroundResource(R.drawable.pesula_part_004);
+                else if (tileList[i].equals("4"))
+                    button.setBackgroundResource(R.drawable.pesula_part_005);
+                else if (tileList[i].equals("5"))
+                    button.setBackgroundResource(R.drawable.pesula_part_006);
+                else if (tileList[i].equals("6"))
+                    button.setBackgroundResource(R.drawable.pesula_part_007);
+                else if (tileList[i].equals("7"))
+                    button.setBackgroundResource(R.drawable.pesula_part_008);
+                else if (tileList[i].equals("8"))
+                    button.setBackgroundResource(R.drawable.pesula_part_009);
+                else if (tileList[i].equals("9"))
+                    button.setBackgroundResource(R.drawable.pesula_part_010);
+                else if (tileList[i].equals("10"))
+                    button.setBackgroundResource(R.drawable.pesula_part_011);
+                else if (tileList[i].equals("11"))
+                    button.setBackgroundResource(R.drawable.pesula_part_012);
+                else if (tileList[i].equals("12"))
+                    button.setBackgroundResource(R.drawable.pesula_part_013);
+                else if (tileList[i].equals("13"))
+                    button.setBackgroundResource(R.drawable.pesula_part_014);
+                else if (tileList[i].equals("14"))
+                    button.setBackgroundResource(R.drawable.pesula_part_015);
+                else if (tileList[i].equals("15"))
+                    button.setBackgroundResource(R.drawable.pesula_part_016);
+                else if (tileList[i].equals("16"))
+                    button.setBackgroundResource(R.drawable.pesula_part_017);
+                else if (tileList[i].equals("17"))
+                    button.setBackgroundResource(R.drawable.pesula_part_018);
+                else if (tileList[i].equals("18"))
+                    button.setBackgroundResource(R.drawable.pesula_part_019);
+                else if (tileList[i].equals("19"))
+                    button.setBackgroundResource(R.drawable.pesula_part_020);
+                else if (tileList[i].equals("20"))
+                    button.setBackgroundResource(R.drawable.pesula_part_021);
+                else if (tileList[i].equals("21"))
+                    button.setBackgroundResource(R.drawable.pesula_part_022);
+                else if (tileList[i].equals("22"))
+                    button.setBackgroundResource(R.drawable.pesula_part_023);
+                else if (tileList[i].equals("23"))
+                    button.setBackgroundResource(R.drawable.pesula_part_024);
+                else if (tileList[i].equals("24"))
+                    button.setBackgroundResource(R.drawable.pesula_part_025);
+
             } else if (Settings.Image == 8){
+
+                if (tileList[i].equals("0"))
+                    button.setBackgroundResource(R.drawable.temppeli_part_001);
+                else if (tileList[i].equals("1"))
+                    button.setBackgroundResource(R.drawable.temppeli_part_002);
+                else if (tileList[i].equals("2"))
+                    button.setBackgroundResource(R.drawable.temppeli_part_003);
+                else if (tileList[i].equals("3"))
+                    button.setBackgroundResource(R.drawable.temppeli_part_004);
+                else if (tileList[i].equals("4"))
+                    button.setBackgroundResource(R.drawable.temppeli_part_005);
+                else if (tileList[i].equals("5"))
+                    button.setBackgroundResource(R.drawable.temppeli_part_006);
+                else if (tileList[i].equals("6"))
+                    button.setBackgroundResource(R.drawable.temppeli_part_007);
+                else if (tileList[i].equals("7"))
+                    button.setBackgroundResource(R.drawable.temppeli_part_008);
+                else if (tileList[i].equals("8"))
+                    button.setBackgroundResource(R.drawable.temppeli_part_009);
+                else if (tileList[i].equals("9"))
+                    button.setBackgroundResource(R.drawable.temppeli_part_010);
+                else if (tileList[i].equals("10"))
+                    button.setBackgroundResource(R.drawable.temppeli_part_011);
+                else if (tileList[i].equals("11"))
+                    button.setBackgroundResource(R.drawable.temppeli_part_012);
+                else if (tileList[i].equals("12"))
+                    button.setBackgroundResource(R.drawable.temppeli_part_013);
+                else if (tileList[i].equals("13"))
+                    button.setBackgroundResource(R.drawable.temppeli_part_014);
+                else if (tileList[i].equals("14"))
+                    button.setBackgroundResource(R.drawable.temppeli_part_015);
+                else if (tileList[i].equals("15"))
+                    button.setBackgroundResource(R.drawable.temppeli_part_016);
+                else if (tileList[i].equals("16"))
+                    button.setBackgroundResource(R.drawable.temppeli_part_017);
+                else if (tileList[i].equals("17"))
+                    button.setBackgroundResource(R.drawable.temppeli_part_018);
+                else if (tileList[i].equals("18"))
+                    button.setBackgroundResource(R.drawable.temppeli_part_019);
+                else if (tileList[i].equals("19"))
+                    button.setBackgroundResource(R.drawable.temppeli_part_020);
+                else if (tileList[i].equals("20"))
+                    button.setBackgroundResource(R.drawable.temppeli_part_021);
+                else if (tileList[i].equals("21"))
+                    button.setBackgroundResource(R.drawable.temppeli_part_022);
+                else if (tileList[i].equals("22"))
+                    button.setBackgroundResource(R.drawable.temppeli_part_023);
+                else if (tileList[i].equals("23"))
+                    button.setBackgroundResource(R.drawable.temppeli_part_024);
+                else if (tileList[i].equals("24"))
+                    button.setBackgroundResource(R.drawable.temppeli_part_025);
 
             }
 
