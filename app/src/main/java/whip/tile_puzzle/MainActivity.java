@@ -426,7 +426,7 @@ public class MainActivity extends AppCompatActivity {
 
         // 2. Chain together various setter methods to set the dialog characteristics
         Drawable i = context.getDrawable(R.drawable.ic_clear_black_24dp);
-        builder.setMessage("Won " + Settings.gameTurns + " time " + getTimeAndReset()) //stats here as message
+        builder.setMessage("Turns" + Settings.gameTurns + " time " + getTimeAndReset()) //stats here as message
                 .setTitle("you wonned").setPositiveButtonIcon(i);
 
         // 3. Get the AlertDialog from create()
