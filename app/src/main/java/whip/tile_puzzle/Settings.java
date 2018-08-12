@@ -2,9 +2,9 @@ package whip.tile_puzzle;
 
 public class Settings {
 
-    public static boolean debugMode = true;
+    public static boolean debugMode = false;
 
-    public static int Image = 0; //0 juoma automaatti
+    public static int Image = 1; //0 juoma automaatti
 
     //make string array for R.drawable.images
 
