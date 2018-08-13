@@ -2,17 +2,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity"
-    app:showAsAction="always">
+    app:showAsAction="ifRoom">
 
         <item
             android:id="@+id/action_settings"
             android:orderInCategory="1"
-            android:title="Settings"
+            android:title="@string/settingsSettings"
             app:showAsAction="never"
             />
 
         <item android:id="@+id/action_statistics"
-            android:title="Player statistics"
+            android:title="@string/settingsStatistics"
             android:orderInCategory="2"
             app:showAsAction="never"
             />
@@ -20,7 +20,7 @@
         <item
             android:id="@+id/action_about"
             android:orderInCategory="3"
-            android:title="About"
+            android:title="@string/settingsAbout"
             app:showAsAction="never"
             />
 

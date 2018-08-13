@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="kuvat">
+        <item>Valitse kuva</item>
+        <item>Auringonlasku</item>
+        <item>Kukat</item>
+        <item>Kitaristi</item>
+        <item>Pyykit</item>
+        <item>Fuji vuori</item>
+        <item>Temppeli</item>
+        <item>Väsynyt palkansaaja</item>
+        <item>Rautatieasema</item>
+        <item>Myyntiautomaatti</item>
+    </string-array>
+
+    <string name="settingsSettings">Asetukset</string>
+
+    <string name="settingsStatistics">Pelaajan tilastot</string>
+
+    <string name="settingsAbout">Tietoa</string>
+
+</resources>

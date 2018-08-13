@@ -15,31 +15,6 @@
 
     </string-array>
     
-    <string-array name="kuvat">
-        <item>Valitse kuva</item>
-        <item>Auringonlasku</item>
-        <item>Kukat</item>
-        <item>Kitaristi</item>
-        <item>Pyykit</item>
-        <item>Fuji vuori</item>
-        <item>Temppeli</item>
-        <item>Väsynyt palkansaaja</item>
-        <item>Rautatieasema</item>
-        <item>Myyntiautomaatti</item>
-    </string-array>
-    
-    <string-array name="ピクチャ"> <!--Pikucha-->
-        <item>画像を選択する</item> <!--Gazo o sentaku suru-->
-        <item>日没</item> <!--Nichibotsu -->
-        <item>花</item> <!--Hana-->
-        <item>ギタリスト</item> <!--Gitarisuto-->
-        <item>ランドリー</item> <!--Randori-->
-        <item>フジ</item> <!--Fuji-->
-        <item>寺</item> <!--Tera-->
-        <item>サラリーマン</item> <!--Sarariman-->
-        <item>鉄道の駅</item> <!--Tetsudo no eki-->
-        <item>自動販売機</item> <!--Jido hanbaiki-->
-    </string-array>
 
     <string name="p1s"><a href="http://www.pixiv.net/member_illust.php?mode=medium&amp;illust_id=69830952">Pixiv link</a></string>
 
@@ -61,5 +36,10 @@
 
     <string name="imageDescription">Choose an image for more</string>
 
+    <string name="settingsSettings">Settings</string>
+
+    <string name="settingsStatistics">Player statistics</string>
+
+    <string name="settingsAbout">About</string>
 
 </resources>
