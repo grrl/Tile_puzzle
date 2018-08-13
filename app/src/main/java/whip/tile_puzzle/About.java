@@ -105,6 +105,7 @@ public class About extends AppCompatActivity {
                             break;
                         default:
                             imageView.setImageResource(android.R.drawable.ic_menu_gallery);
+                            textView.setText(R.string.imageDescription);
                             break;
                     }
 
@@ -151,6 +152,7 @@ public class About extends AppCompatActivity {
                             break;
                         default:
                             imageView.setImageResource(android.R.drawable.ic_menu_gallery);
+                            textView.setText(R.string.imageDescription);
                             break;
                     }
 
@@ -196,6 +198,7 @@ public class About extends AppCompatActivity {
                             break;
                         default:
                             imageView.setImageResource(android.R.drawable.ic_menu_gallery);
+                            textView.setText(R.string.imageDescription);
                             break;
                     }
 
