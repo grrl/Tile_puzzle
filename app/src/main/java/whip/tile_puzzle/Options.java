@@ -1,6 +1,5 @@
 package whip.tile_puzzle;
 
-import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -8,12 +7,10 @@ import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 
@@ -39,11 +36,11 @@ public class Options extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_options);
 
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        Spinner spinner = /*(Spinner)*/ findViewById(R.id.spinner);
         //painike
-        button = (Button) findViewById(R.id.button);
+        button = /*(Button)*/ findViewById(R.id.button);
 
-        imageView = (ImageView) findViewById(R.id.imageView);
+        imageView = /*(ImageView)*/ findViewById(R.id.imageView);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,7 +54,7 @@ public class Options extends AppCompatActivity {
             }
         });
 
-        radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
+        radioGroup = /*(RadioGroup)*/ findViewById(R.id.radioGroup);
 
         if(getSound(this))
             radioGroup.check(R.id.soundOn);
@@ -87,13 +84,13 @@ public class Options extends AppCompatActivity {
         final ArrayAdapter<String> adapter;
 
         if(Locale.getDefault().getLanguage().equals("fi")){
-            adapter = new ArrayAdapter<String>(Options.this,
+            adapter = new ArrayAdapter</*String*/>(Options.this,
                     android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.kuvat));
         } else if (Locale.getDefault().getLanguage().equals("ja")){
-            adapter = new ArrayAdapter<String>(Options.this,
+            adapter = new ArrayAdapter</*String*/>(Options.this,
                     android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.ピクチャ));
         } else {
-            adapter = new ArrayAdapter<String>(Options.this,
+            adapter = new ArrayAdapter</*String*/>(Options.this,
                     android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.images));
         }
         //adapter dropdown

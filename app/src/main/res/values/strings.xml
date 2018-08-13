@@ -65,4 +65,12 @@
 
     <string name="youWon">You won!</string>
 
+    <string name="toastSettings">Settings</string>
+
+    <string name="toastStatistics">Statistics</string>
+
+    <string name="toastAbout">About</string>
+
+    <string name="invalidMove">Invalid move</string>
+
 </resources>

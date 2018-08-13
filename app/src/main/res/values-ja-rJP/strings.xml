@@ -16,6 +16,24 @@
         <item>自動販売機</item> <!--Jido hanbaiki-->
     </string-array>
 
+    <string name="p1s"><a href="http://www.pixiv.net/member_illust.php?mode=medium&amp;illust_id=69830952">ピピクシブリンク</a></string>
+
+    <string name="p2s"><a href="https://www.pixiv.net/member_illust.php?mode=medium&amp;illust_id=69838477">ピクシブリンク</a></string>
+
+    <string name="p3s"><a href="https://www.pixiv.net/member_illust.php?mode=medium&amp;illust_id=69983027">ピクシブリンク</a></string>
+
+    <string name="p4s"><a href="https://www.pixiv.net/member_illust.php?mode=medium&amp;illust_id=70119624">ピクシブリンク</a></string>
+
+    <string name="p5s"><a href="https://www.pixiv.net/member_illust.php?mode=medium&amp;illust_id=70126116">ピクシブリンク</a></string>
+
+    <string name="p6s"><a href="https://www.pixiv.net/member_illust.php?mode=medium&amp;illust_id=70157506">ピクシブリンク</a></string>
+
+    <string name="p7s"><a href="https://www.pixiv.net/member_illust.php?mode=medium&amp;illust_id=69111772">ピクシブリンク</a></string>
+
+    <string name="p8s"><a href="https://konachan.net/post/show/267317/blush-brown_eyes-brown_hair-close-drink-kotatsu-sh">Konachanリンク</a></string>
+
+    <string name="p9s"><a href="https://konachan.net/post/show/269163/aqua_eyes-black_hair-chihuri405-kneehighs-night-or">Konachanリンク</a></string>
+
     <string name="settingsSettings">設定</string>
 
     <string name="settingsStatistics">プレーヤー統計</string>
@@ -43,5 +61,13 @@
     <string name="time">時間</string>
 
     <string name="youWon">あなたは勝った!</string>
+
+    <string name="toastSettings">設定</string>
+
+    <string name="toastStatistics">統計</string>
+
+    <string name="toastAbout">情報</string>
+
+    <string name="invalidMove">無効な移動</string>
 
 </resources>

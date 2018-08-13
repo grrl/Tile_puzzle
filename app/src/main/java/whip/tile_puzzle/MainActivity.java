@@ -1,16 +1,10 @@
 package whip.tile_puzzle;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Resources;
-import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.graphics.drawable.Icon;
 import android.media.MediaPlayer;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,10 +16,8 @@ import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.Toast;
 
-import java.net.ConnectException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -63,18 +55,15 @@ public class MainActivity extends AppCompatActivity {
 
         switch (item.getItemId()){
             case R.id.action_settings:
-                Toast.makeText(MainActivity.this, "Going to setting" +
-                        "action menu", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, R.string.toastSettings, Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, Options.class));
                 break;
             case R.id.action_statistics:
-                Toast.makeText(MainActivity.this, "Going to statistics" +
-                        "action menu", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, R.string.toastStatistics, Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, Statistics.class));
                 break;
             case R.id.action_about:
-                Toast.makeText(MainActivity.this, "Going to about" +
-                        "action menu", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, R.string.toastAbout, Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, About.class));
                 break;
         }
@@ -927,7 +916,7 @@ public class MainActivity extends AppCompatActivity {
         else if (blankTile == position - 5)
             swap(context, position, -5);
         else
-            Toast.makeText(context, "Invalid move", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, context.getResources().getString(R.string.invalidMove), Toast.LENGTH_SHORT).show();
 
     }
 

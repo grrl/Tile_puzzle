@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import java.text.DateFormat;
-import java.text.DateFormatSymbols;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -31,10 +30,10 @@ public class Statistics extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_statistics);
 
-        wins = (TextView) findViewById(R.id.winsVar);
+        wins = /*(TextView)*/ findViewById(R.id.winsVar);
         wins.setText(Integer.toString(showWins(this)));
 
-        date = (TextView) findViewById(R.id.dateVar);
+        date = /*(TextView)*/ findViewById(R.id.dateVar);
 
         if(Locale.getDefault().getLanguage().equals("fi")){
             df = new SimpleDateFormat("dd'.'MM'.'yyyy HH:mm:ss");
@@ -51,7 +50,7 @@ public class Statistics extends AppCompatActivity {
         String reportDate = df.format(startingDate);
         System.out.println(reportDate);
 
-        turns = (TextView) findViewById(R.id.turnsVar);
+        turns = /*(TextView)*/ findViewById(R.id.turnsVar);
         turns.setText(Integer.toString(showTurns(this)));
 
         date.setText(reportDate);

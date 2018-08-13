@@ -2,8 +2,6 @@ package whip.tile_puzzle;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Html;
-import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.AdapterView;
@@ -14,8 +12,6 @@ import android.widget.TextView;
 
 import java.util.Locale;
 
-import static android.text.Html.TO_HTML_PARAGRAPH_LINES_CONSECUTIVE;
-import static android.text.Html.fromHtml;
 
 public class About extends AppCompatActivity {
 
