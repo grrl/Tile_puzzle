@@ -78,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_about:
                 Toast.makeText(MainActivity.this, "Going to about" +
                         "action menu", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, About.class));
                 break;
         }
 
