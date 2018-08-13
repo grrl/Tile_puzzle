@@ -741,7 +741,7 @@ public class MainActivity extends AppCompatActivity {
             return false;
 
         for(int i = 0; i < tileList.length; i++){
-            if(tileList[i] != Integer.toString(i))
+            if(!tileList[i].equals(Integer.toString(i)))
                 return false;
         }
         return true;
