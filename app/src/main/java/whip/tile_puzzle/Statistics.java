@@ -56,7 +56,6 @@ public class Statistics extends AppCompatActivity {
 
         date.setText(reportDate);
 
-
     }
 
     private int showWins(Context context){

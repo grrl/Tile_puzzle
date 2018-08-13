@@ -40,10 +40,6 @@ public class MainActivity extends AppCompatActivity {
 
     private static int m_ColumnWidth, m_ColumnHeight;
 
-    public static final String up = "up";
-    public static final String down = "down";
-    public static final String left = "left";
-    public static final String right = "right";
     public static Timer timer;
     public static int second = 0;
 
@@ -171,7 +167,6 @@ public class MainActivity extends AppCompatActivity {
 
         if(Settings.debugMode) {
             for (int i = 0; i < tileList.length - 1; i++){
-
 
 
                 if(i == 18){ //23 tiili (22) matches
@@ -934,6 +929,5 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(context, "Invalid move", Toast.LENGTH_SHORT).show();
 
     }
-
 
 }
