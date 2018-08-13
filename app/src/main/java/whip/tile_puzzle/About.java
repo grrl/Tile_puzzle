@@ -29,11 +29,11 @@ public class About extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
-        Spinner spinner = (Spinner) findViewById(R.id.spinnerAbout);
+        Spinner spinner = /*(Spinner)*/ findViewById(R.id.spinnerAbout);
 
-        imageView = (ImageView) findViewById(R.id.imageView12);
+        imageView = /*(ImageView)*/ findViewById(R.id.imageView12);
 
-        textView = (TextView) findViewById(R.id.textViewAbout);
+        textView = /*(TextView)*/ findViewById(R.id.textViewAbout);
 
         textView.setClickable(true);
         textView.setMovementMethod(LinkMovementMethod.getInstance());
@@ -42,13 +42,13 @@ public class About extends AppCompatActivity {
         final ArrayAdapter<String> adapter;
 
         if(Locale.getDefault().getLanguage().equals("fi")){
-            adapter = new ArrayAdapter<String>(About.this,
+            adapter = new ArrayAdapter</*String*/>(About.this,
                     android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.kuvat));
         } else if (Locale.getDefault().getLanguage().equals("ja")){
-            adapter = new ArrayAdapter<String>(About.this,
+            adapter = new ArrayAdapter</*String*/>(About.this,
                     android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.ピクチャ));
         } else {
-            adapter = new ArrayAdapter<String>(About.this,
+            adapter = new ArrayAdapter</*String*/>(About.this,
                     android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.images));
         }
         //adapter dropdown
@@ -105,7 +105,7 @@ public class About extends AppCompatActivity {
                             break;
                         default:
                             imageView.setImageResource(android.R.drawable.ic_menu_gallery);
-                            textView.setText(R.string.imageDescription);
+                            textView.setText(R.string.aboutDescription);
                             break;
                     }
 
@@ -152,7 +152,7 @@ public class About extends AppCompatActivity {
                             break;
                         default:
                             imageView.setImageResource(android.R.drawable.ic_menu_gallery);
-                            textView.setText(R.string.imageDescription);
+                            textView.setText(R.string.aboutDescription);
                             break;
                     }
 
@@ -198,7 +198,7 @@ public class About extends AppCompatActivity {
                             break;
                         default:
                             imageView.setImageResource(android.R.drawable.ic_menu_gallery);
-                            textView.setText(R.string.imageDescription);
+                            textView.setText(R.string.aboutDescription);
                             break;
                     }
 
