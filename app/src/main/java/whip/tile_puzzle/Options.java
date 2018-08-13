@@ -1,5 +1,6 @@
 package whip.tile_puzzle;
 
+import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -7,8 +8,11 @@ import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 
@@ -23,6 +27,7 @@ public class Options extends AppCompatActivity {
     private RadioGroup radioGroup;
     private SharedPreferences m_sharedPreferences;
     private MediaPlayer player;
+    private String selecteditem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,11 +78,33 @@ public class Options extends AppCompatActivity {
             }
         });
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(Options.this,
+
+
+        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(Options.this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.images));
         //adapter dropdown
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
         spinner.setAdapter(adapter);
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
+        {
+            @Override
+            public void onItemSelected(AdapterView adapter, View v, int i, long lng) {
+
+                selecteditem =  adapter.getItemAtPosition(i).toString();
+
+                System.out.println(selecteditem);
+                //or this can be also right: selecteditem = level[i];
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView)
+            {
+
+            }
+        });
+
+
     }
 
     private void playSound(){
