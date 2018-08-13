@@ -72,12 +72,12 @@ public class About extends AppCompatActivity {
                             textView.setText(R.string.p1s);
                             break;
                         case "Kukat":
-                            imageView.setImageResource(R.drawable.p5);
-                            textView.setText(R.string.p5s);
-                            break;
-                        case "Kitaristi":
                             imageView.setImageResource(R.drawable.p6);
                             textView.setText(R.string.p6s);
+                            break;
+                        case "Kitaristi":
+                            imageView.setImageResource(R.drawable.p5);
+                            textView.setText(R.string.p5s);
                             break;
                         case "Pyykit":
                             imageView.setImageResource(R.drawable.p9);
@@ -104,6 +104,7 @@ public class About extends AppCompatActivity {
                             textView.setText(R.string.p7s);
                             break;
                         default:
+                            imageView.setImageResource(android.R.drawable.ic_menu_gallery);
                             break;
                     }
 
@@ -149,11 +150,12 @@ public class About extends AppCompatActivity {
                             textView.setText(R.string.p7s);
                             break;
                         default:
+                            imageView.setImageResource(android.R.drawable.ic_menu_gallery);
                             break;
                     }
 
                 } else {
-                    
+
                     switch (selecteditem){
 
                         case "Flowers":
@@ -193,6 +195,7 @@ public class About extends AppCompatActivity {
                             textView.setText(R.string.p7s);
                             break;
                         default:
+                            imageView.setImageResource(android.R.drawable.ic_menu_gallery);
                             break;
                     }
 

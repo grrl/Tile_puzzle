@@ -12,6 +12,7 @@ import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
@@ -30,6 +31,7 @@ public class Options extends AppCompatActivity {
     private SharedPreferences m_sharedPreferences;
     private MediaPlayer player;
     private String selecteditem;
+    private ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,8 @@ public class Options extends AppCompatActivity {
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
         //painike
         button = (Button) findViewById(R.id.button);
+
+        imageView = (ImageView) findViewById(R.id.imageView);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,7 +111,6 @@ public class Options extends AppCompatActivity {
                 if(Locale.getDefault().getLanguage().equals("fi")){
 
                     /*
-                     <item>Valitse kuva</item>
                 <item>Auringonlasku</item>
                 <item>Kukat</item>
                 <item>Kitaristi</item>
@@ -121,39 +124,48 @@ public class Options extends AppCompatActivity {
                     switch (selecteditem){
                         case "Auringonlasku":
                             Settings.Image = 1;
+                            imageView.setImageResource(R.drawable.p1);
                             break;
                         case "Kukat":
                             Settings.Image = 6;
+                            imageView.setImageResource(R.drawable.p6);
                             break;
                         case "Kitaristi":
                             Settings.Image = 5;
+                            imageView.setImageResource(R.drawable.p5);
                             break;
                         case "Pyykit":
                             Settings.Image = 7;
+                            imageView.setImageResource(R.drawable.p9);
                             break;
                         case "Fuji vuori":
                             Settings.Image = 2;
+                            imageView.setImageResource(R.drawable.p3);
                             break;
                         case "Temppeli":
                             Settings.Image = 8;
+                            imageView.setImageResource(R.drawable.p4);
                             break;
                         case "Väsynyt palkansaaja":
                             Settings.Image = 4;
+                            imageView.setImageResource(R.drawable.p8);
                             break;
                         case "Rautatieasema":
                             Settings.Image = 3;
+                            imageView.setImageResource(R.drawable.p2);
                             break;
                         case "Myyntiautomaatti":
                             Settings.Image = 0;
+                            imageView.setImageResource(R.drawable.p7);
                             break;
                         default:
+                            imageView.setImageResource(android.R.drawable.ic_menu_gallery);
                             break;
                     }
 
                 } else if (Locale.getDefault().getLanguage().equals("ja")){
 
                     /*
-                    <item>画像を選択する</item> <!--Gazo o sentaku suru-->
                     <item>日没</item> <!--Nichibotsu -->
                     <item>花</item> <!--Hana-->
                     <item>ギタリスト</item> <!--Gitarisuto-->
@@ -168,40 +180,47 @@ public class Options extends AppCompatActivity {
 
                         case "日没":
                             Settings.Image = 1;
-
+                            imageView.setImageResource(R.drawable.p1);
                             break;
                         case "花":
                             Settings.Image = 6;
+                            imageView.setImageResource(R.drawable.p6);
                             break;
                         case "ギタリスト":
                             Settings.Image = 5;
+                            imageView.setImageResource(R.drawable.p5);
                             break;
                         case "ランドリー":
                             Settings.Image = 7;
+                            imageView.setImageResource(R.drawable.p9);
                             break;
                         case "フジ":
                             Settings.Image = 2;
+                            imageView.setImageResource(R.drawable.p3);
                             break;
                         case "寺":
                             Settings.Image = 8;
+                            imageView.setImageResource(R.drawable.p4);
                             break;
                         case "サラリーマン":
                             Settings.Image = 4;
+                            imageView.setImageResource(R.drawable.p8);
                             break;
                         case "鉄道の駅":
                             Settings.Image = 3;
+                            imageView.setImageResource(R.drawable.p2);
                             break;
                         case "自動販売機":
                             Settings.Image = 0;
-
+                            imageView.setImageResource(R.drawable.p7);
                             break;
                         default:
+                            imageView.setImageResource(android.R.drawable.ic_menu_gallery);
                             break;
                     }
 
                 } else {
                     /*
-                    <item>Choose a picture</item>
                     <item>Flowers</item>
                     <item>Guitarist</item>
                     <item>Laundry</item>
@@ -216,32 +235,42 @@ public class Options extends AppCompatActivity {
 
                         case "Flowers":
                             Settings.Image = 6;
+                            imageView.setImageResource(R.drawable.p5);
                             break;
                         case "Guitarist":
                             Settings.Image = 5;
+                            imageView.setImageResource(R.drawable.p6);
                             break;
                         case "Laundry":
                             Settings.Image = 7;
+                            imageView.setImageResource(R.drawable.p9);
                             break;
                         case "Mount Fuji":
                             Settings.Image = 2;
+                            imageView.setImageResource(R.drawable.p3);
                             break;
                         case "Sunset":
                             Settings.Image = 1;
+                            imageView.setImageResource(R.drawable.p1);
                             break;
                         case "Temple":
                             Settings.Image = 8;
+                            imageView.setImageResource(R.drawable.p4);
                             break;
                         case "Tired salaryman":
                             Settings.Image = 4;
+                            imageView.setImageResource(R.drawable.p8);
                             break;
                         case "Railway station":
                             Settings.Image = 3;
+                            imageView.setImageResource(R.drawable.p2);
                             break;
                         case "Vending Machine":
                             Settings.Image = 0;
+                            imageView.setImageResource(R.drawable.p7);
                             break;
                         default:
+                            imageView.setImageResource(android.R.drawable.ic_menu_gallery);
                             break;
                     }
 
