@@ -42,4 +42,26 @@
 
     <string name="settingsAbout">About</string>
 
+    <string name="aboutDescription">Choose a piece of art for more details</string>
+
+    <string name="trainingModeCheckbox">Training mode</string>
+
+    <string name="soundOnCheckbox">Sound ON</string>
+
+    <string name="soundOffCheckbox">Sound OFF</string>
+
+    <string name="startGameString">Start game</string>
+
+    <string name="moves">Total Moves:</string>
+
+    <string name="wins">Wins:</string>
+    
+    <string name="startingDate">Started playing:</string>
+
+    <string name="gameTurns">Turns</string>
+
+    <string name="time">Time</string>
+
+    <string name="youWon">You won!</string>
+
 </resources>

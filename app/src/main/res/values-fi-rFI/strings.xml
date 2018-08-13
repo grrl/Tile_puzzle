@@ -20,4 +20,26 @@
 
     <string name="settingsAbout">Tietoa</string>
 
+    <string name="aboutDescription">Valitse kuva saadaksesi lisätietoa</string>
+
+    <string name="trainingModeCheckbox">Harjoittelu tila</string>
+
+    <string name="soundOnCheckbox">Äänet päälle</string>
+
+    <string name="soundOffCheckbox">Äänet pois päältä</string>
+
+    <string name="startGameString">Aloita peli</string>
+
+    <string name="moves">Siirrot:</string>
+
+    <string name="wins">Voitot:</string>
+
+    <string name="startingDate">Pelaamisen aloittaminen:</string>
+
+    <string name="gameTurns">Siirrot</string>
+
+    <string name="time">Aika</string>
+
+    <string name="youWon">Voitit!</string>
+
 </resources>

@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
         android:textSize="16sp"
-        android:text="Choose a picture for more details"
+        android:text="@string/aboutDescription"
         app:layout_constraintStart_toEndOf="@+id/imageView12"
         app:layout_constraintTop_toTopOf="@+id/imageView12"
         />

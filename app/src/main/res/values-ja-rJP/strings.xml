@@ -20,5 +20,26 @@
 
     <string name="settingsAbout">情報</string>
 
+    <string name="aboutDescription">詳細は写真を選択してください</string>
+
+    <string name="trainingModeCheckbox">トレーニングモード</string>
+
+    <string name="soundOnCheckbox">サウンドオン</string>
+
+    <string name="soundOffCheckbox">音を立てる</string>
+
+    <string name="startGameString">ゲームをスタート</string>
+
+    <string name="moves">転送:</string>
+
+    <string name="wins">勝つ:</string>
+
+    <string name="startingDate">演奏を開始:</string>
+
+    <string name="gameTurns">転送</string>
+
+    <string name="time">時間</string>
+
+    <string name="youWon">あなたは勝った!</string>
 
 </resources>

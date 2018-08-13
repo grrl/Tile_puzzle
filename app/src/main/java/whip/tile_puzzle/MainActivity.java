@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.Icon;
@@ -125,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
         if(getDateTime(m_sharedPreferences) == 0)
             setDateSharedPreferences(context);
 
-        System.out.println("daato" + getDateTime(m_sharedPreferences));
+        System.out.println("date" + getDateTime(m_sharedPreferences));
     }
 
 
@@ -821,8 +822,8 @@ public class MainActivity extends AppCompatActivity {
 
         // 2. Chain together various setter methods to set the dialog characteristics
         Drawable i = context.getDrawable(R.drawable.ic_clear_black_24dp);
-        builder.setMessage("Turns" + Settings.gameTurns + " time " + getTimeAndReset()) //stats here as message
-                .setTitle("you wonned").setPositiveButtonIcon(i);
+        builder.setMessage(context.getResources().getString(R.string.gameTurns) + " " + Settings.gameTurns + " " + context.getResources().getString(R.string.time) + ": " + getTimeAndReset()) //stats here as message
+                .setTitle(context.getResources().getString(R.string.youWon)).setPositiveButtonIcon(i);
 
         // 3. Get the AlertDialog from create()
         AlertDialog dialog = builder.create();

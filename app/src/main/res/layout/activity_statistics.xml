@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:text="Siirrot:"
+        android:text="@string/moves"
         app:layout_constraintBaseline_toBaselineOf="@+id/turnsVar"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -30,7 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:text="Wins:"
+        android:text="@string/wins"
         app:layout_constraintBaseline_toBaselineOf="@+id/winsVar"
         app:layout_constraintEnd_toStartOf="@+id/winsVar" />
 
@@ -40,7 +40,7 @@
         android:layout_height="16dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:text="Pelaamisen aloittaminen:"
+        android:text="@string/startingDate"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
