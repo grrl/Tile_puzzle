@@ -5,17 +5,20 @@
     <item android:id="@+id/action_settings"
         android:title="Settings"
         android:orderInCategory="1"
+        android:icon="@drawable/ic_settings_black_24dp"
         app:showAsAction="never" />
 
     <item android:id="@+id/action_statistics"
         android:title="Player statistics"
         android:orderInCategory="2"
+        android:icon="@drawable/ic_equalizer_black_24dp"
         app:showAsAction="never"/>
 
     <item
         android:id="@+id/action_about"
         android:orderInCategory="3"
         android:title="About"
+        android:icon="@drawable/ic_info_outline_black_24dp"
         app:showAsAction="never"
         />
 </menu>
