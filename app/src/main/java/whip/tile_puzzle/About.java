@@ -65,18 +65,7 @@ public class About extends AppCompatActivity {
 
                 if(Locale.getDefault().getLanguage().equals("fi")){
 
-                    /*
-                     <item>Valitse kuva</item>
-                <item>Auringonlasku</item>
-                <item>Kukat</item>
-                <item>Kitaristi</item>
-                <item>Pyykit</item>
-                <item>Fuji vuori</item>
-                <item>Temppeli</item>
-                <item>Väsynyt palkansaaja</item>
-                <item>Rautatieasema</item>
-                <item>Myyntiautomaatti</item>
-                    */
+
                     switch (selecteditem){
                         case "Auringonlasku":
                             imageView.setImageResource(R.drawable.p1);
@@ -120,18 +109,7 @@ public class About extends AppCompatActivity {
 
                 } else if (Locale.getDefault().getLanguage().equals("ja")){
 
-                    /*
-                    <item>画像を選択する</item> <!--Gazo o sentaku suru-->
-                    <item>日没</item> <!--Nichibotsu -->
-                    <item>花</item> <!--Hana-->
-                    <item>ギタリスト</item> <!--Gitarisuto-->
-                    <item>ランドリー</item> <!--Randori-->
-                    <item>フジ</item> <!--Fuji-->
-                    <item>寺</item> <!--Tera-->
-                    <item>サラリーマン</item> <!--Sarariman-->
-                    <item>鉄道の駅</item> <!--Tetsudo no eki-->
-                    <item>自動販売機</item> <!--Jido hanbaiki-->
-                     */
+
                     switch (selecteditem){
 
                         case "日没":
@@ -175,18 +153,7 @@ public class About extends AppCompatActivity {
                     }
 
                 } else {
-                    /*
-                    <item>Choose a picture</item>
-                    <item>Flowers</item>
-                    <item>Guitarist</item>
-                    <item>Laundry</item>
-                    <item>Mount Fuji</item>
-                    <item>Sunset</item>
-                    <item>Temple</item>
-                    <item>Tired salaryman</item>
-                    <item>Railway station</item>
-                    <item>Vending Machine</item>
-                     */
+                    
                     switch (selecteditem){
 
                         case "Flowers":
