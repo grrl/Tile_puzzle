@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import java.text.DateFormat;
+import java.text.DateFormatSymbols;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 import static whip.tile_puzzle.MainActivity.getDateTime;
 import static whip.tile_puzzle.MainActivity.getTurns;
@@ -22,7 +24,7 @@ public class Statistics extends AppCompatActivity {
     private long startingLong;
     private Date startingDate;
     private SharedPreferences m_sharedPreferences;
-
+    private DateFormat df;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +36,15 @@ public class Statistics extends AppCompatActivity {
 
         date = (TextView) findViewById(R.id.dateVar);
 
-        DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+        if(Locale.getDefault().getLanguage().equals("fi")){
+            df = new SimpleDateFormat("dd'.'MM'.'yyyy HH:mm:ss");
+
+        } else if (Locale.getDefault().getLanguage().equals("ja")){
+            df = new SimpleDateFormat("yyyy'年'MM'月'dd'日' HH:mm:ss");
+
+        } else {
+            df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+        }
 
         startingLong = getDate(this);
         startingDate = new Date(startingLong);
