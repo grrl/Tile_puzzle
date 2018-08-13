@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:http="http://schemas.android.com/tools">
     <string name="app_name">Tile_puzzle</string>
 
     <string-array name="images">
