@@ -11,7 +11,7 @@ import android.widget.GridView;
 
 
 /**
- *
+ * GestureDetectGridView luokka
  */
 public class GestureDetectGridView extends GridView {
     private GestureDetector gDetector;

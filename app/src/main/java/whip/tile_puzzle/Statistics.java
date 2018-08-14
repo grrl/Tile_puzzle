@@ -16,7 +16,7 @@ import static whip.tile_puzzle.MainActivity.getTurns;
 import static whip.tile_puzzle.MainActivity.getWins;
 
 /**
- *
+ * Statistics luokka
  */
 public class Statistics extends AppCompatActivity {
 

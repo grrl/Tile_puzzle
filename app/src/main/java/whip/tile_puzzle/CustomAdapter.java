@@ -8,7 +8,7 @@ import android.widget.Button;
 import java.util.ArrayList;
 
 /**
- *
+ * CustomAdapter luokka
  */
 public class CustomAdapter extends BaseAdapter {
     private ArrayList<Button> mButtons;

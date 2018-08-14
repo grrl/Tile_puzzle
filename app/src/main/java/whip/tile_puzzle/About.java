@@ -14,7 +14,7 @@ import java.util.Locale;
 
 
 /**
- *
+ * About luokka
  */
 public class About extends AppCompatActivity {
 

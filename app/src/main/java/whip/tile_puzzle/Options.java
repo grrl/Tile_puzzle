@@ -25,6 +25,9 @@ import static whip.tile_puzzle.MainActivity.getWins;
 import static whip.tile_puzzle.MainActivity.resetGame;
 import static whip.tile_puzzle.MainActivity.setSoundSharedPreferences;
 
+/**
+ * Options luokka
+ */
 public class Options extends AppCompatActivity {
 
     private Button button;
@@ -320,7 +323,7 @@ public class Options extends AppCompatActivity {
 
                 }
                 System.out.println(selecteditem);
-                //or this can be also right: selecteditem = level[i];
+
             }
 
             /**

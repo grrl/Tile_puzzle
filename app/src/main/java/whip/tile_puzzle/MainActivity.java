@@ -25,7 +25,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- *
+ * Main luokka MainActivity
  */
 public class MainActivity extends AppCompatActivity {
 
@@ -173,7 +173,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     *
+     * Arpoo palat
      */
     protected static void scramble() {
         int index;
@@ -192,11 +192,11 @@ public class MainActivity extends AppCompatActivity {
             for (int i = 0; i < tileList.length - 1; i++){
 
 
-                if(i == 18){ //23 tiili (22) matches
+                if(i == 18){
 
                     tileList[i] = p23;
 
-                } else if (i == 19){ //24 tiili (23 matches)
+                } else if (i == 19){
 
                     tileList[i] = p18;
 
@@ -206,7 +206,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
 
-            //valkoinen pala aina viimeinen
 
         } else {
             for (int i = tileList.length - 1; i > 0; i--) {
@@ -917,17 +916,15 @@ public class MainActivity extends AppCompatActivity {
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
 
-        // 2. Chain together various setter methods to set the dialog characteristics
         Drawable i = context.getDrawable(R.drawable.ic_clear_black_24dp);
         builder.setMessage(context.getResources().getString(R.string.gameTurns) + " " + Settings.gameTurns + "\n" + context.getResources().getString(R.string.time) + ": " + getTimeAndReset(context)) //stats here as message
                 .setTitle(context.getResources().getString(R.string.youWon)).setPositiveButtonIcon(i);
 
-        // 3. Get the AlertDialog from create()
         AlertDialog dialog = builder.create();
 
         Settings.playGame = false;
-        //Näytä iso kuva lopuksi?
-        // 4. Show the dialog
+
+        //Show the dialog
         setSharedPreferences(context);
 
         dialog.show();
