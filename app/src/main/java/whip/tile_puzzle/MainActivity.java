@@ -84,21 +84,6 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
-    /**
-     * Kutsutaan kun halutaan resetoida peli
-     */
-    public static void resetGame(){
-
-        init();
-
-        scramble();
-
-        Settings.gameTurns = 0;
-
-        second = 0;
-    }
-
     /**
      * @param savedInstanceState
      */
@@ -188,6 +173,8 @@ public class MainActivity extends AppCompatActivity {
         String p23 = tileList[23]; //23
         System.out.println("p23 " + p23);
 
+        System.out.println("Shuffle pois päältä " + Settings.debugMode);
+
         if(Settings.debugMode) {
             for (int i = 0; i < tileList.length - 1; i++){
 
@@ -206,7 +193,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
 
-
         } else {
             for (int i = tileList.length - 1; i > 0; i--) {
 
@@ -216,6 +202,8 @@ public class MainActivity extends AppCompatActivity {
                 tileList[i] = temp;
             }
         }
+
+        Settings.debugMode = false; //resetoi valinta harjoittelu tilalle
     }
 
 
@@ -936,9 +924,12 @@ public class MainActivity extends AppCompatActivity {
      */
     public static void reset(){
 
-        second = 0;
+        if(timer != null) // jos timer olio on olemassa katkaise se
+            timer.cancel(); //pysäytä timer
 
-        Settings.gameTurns = 0;
+        second = 0; //aika takaisin 0 sekuntia
+
+        Settings.gameTurns = 0; //siirrot takaisin 0
     }
 
     /** Kutsutaan kun halutaan tietää kuinka kauan aikaa meni voittoon

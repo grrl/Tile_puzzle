@@ -22,7 +22,6 @@ import java.util.Set;
 
 import static whip.tile_puzzle.MainActivity.getSoundandReturn;
 import static whip.tile_puzzle.MainActivity.getWins;
-import static whip.tile_puzzle.MainActivity.resetGame;
 import static whip.tile_puzzle.MainActivity.setSoundSharedPreferences;
 
 /**
@@ -59,10 +58,17 @@ public class Options extends AppCompatActivity {
 
         checkBox = /*(CheckBox)*/ findViewById(R.id.checkBox);
 
-        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        checkBox.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                Settings.debugMode = b;
+            public void onClick(View view) {
+                if (checkBox.isChecked()) {
+                    Settings.debugMode = true;
+                    System.out.println("shuffle off");
+                }
+                else {
+                    Settings.debugMode = false;
+                    System.out.println("shuffle on");
+                }
             }
         });
 
@@ -78,7 +84,7 @@ public class Options extends AppCompatActivity {
 
                     Settings.playGame = true;
                     //kutsu reset metodia
-                    resetGame();
+                    //resetGame();
 
                     startActivity(new Intent(Options.this, MainActivity.class));
                 }
