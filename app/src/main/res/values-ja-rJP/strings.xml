@@ -83,4 +83,13 @@
 
     <string name="about_name">情報</string>
 
+    <string name="game_rules"><b><u>ゲームのルール</u></b>\n
+    ピースを垂直または水平に動かす\n
+    あなたのソリューションが元のものと一致するまで.\n
+    <b>トレーニングモード</b>\n
+    ピースは快適に設定されています.\n
+        訓練のためだけに.
+    </string>
+
+
 </resources>

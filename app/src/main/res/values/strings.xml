@@ -86,4 +86,12 @@
 
     <string name="about_name">About</string>
 
+    <string name="game_rules"><b><u>Game rules</u></b>\n
+    Move tiles horizontal or vertical\n
+    until your solution matches the original.\n
+    <b>Training mode</b>\n
+    Tiles are arranged conveniently.\n
+        For training purposes only.
+    </string>
+
 </resources>

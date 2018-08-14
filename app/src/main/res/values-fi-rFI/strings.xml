@@ -83,4 +83,13 @@
 
     <string name="about_name">Tietoa</string>
 
+    <string name="game_rules"><b><u>Pelin säännöt</u></b>\n
+    Siirrä paloja pysty- ja vaakasuoraan\n
+    kunnes ratkaisusi vastaa alkuperäistä.\n
+    <b>Harjoittelu tila</b>\n
+    Palojen asettelua on valmiiksi helpotettu.\n
+        Vain harjoitustarkoituksiin.
+    </string>
+
+
 </resources>
