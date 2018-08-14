@@ -25,7 +25,7 @@ public class About extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
-        Spinner spinner = /*(Spinner)*/ findViewById(R.id.spinnerAbout);
+        spinner = /*(Spinner)*/ findViewById(R.id.spinnerAbout);
 
         imageView = /*(ImageView)*/ findViewById(R.id.imageView12);
 
