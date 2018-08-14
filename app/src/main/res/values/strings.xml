@@ -79,4 +79,10 @@
 
     <string name="second">seconds</string>
 
+    <string name="options_name">Settings</string>
+
+    <string name="statistics_name">Statistics</string>
+
+    <string name="about_name">About</string>
+
 </resources>

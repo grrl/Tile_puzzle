@@ -76,4 +76,10 @@
 
     <string name="second">sekuntia</string>
 
+    <string name="options_name">Asetukset</string>
+
+    <string name="statistics_name">Tilastot</string>
+
+    <string name="about_name">Tietoa</string>
+
 </resources>

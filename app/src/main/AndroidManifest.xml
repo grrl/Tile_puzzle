@@ -17,10 +17,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Options" />
-        <activity android:name=".About" />
+        <activity android:name=".Options"
+            android:label="@string/options_name" />
+        <activity android:name=".About"
+            android:label="@string/about_name" />
         <activity android:name=".Statistics"
-            android:label="Statistics"/>
+            android:label="@string/about_name"/>
     </application>
 
 </manifest>

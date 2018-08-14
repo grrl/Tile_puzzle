@@ -76,4 +76,10 @@
 
     <string name="second">秒</string>
 
+    <string name="options_name">設定</string>
+
+    <string name="statistics_name">統計</string>
+
+    <string name="about_name">情報</string>
+
 </resources>
