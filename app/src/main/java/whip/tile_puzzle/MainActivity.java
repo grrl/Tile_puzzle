@@ -891,7 +891,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static String getTimeAndReset(Context context){
-        int min = Math.round(second / 60);
+        int min = (int)Math.floor(second / 60);
 
         int sec = second - (60 * min);
 

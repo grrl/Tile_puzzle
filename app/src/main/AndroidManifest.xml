@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,11 +19,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".Options"
-            android:label="@string/options_name" />
+            android:label="@string/options_name"
+            />
         <activity android:name=".About"
-            android:label="@string/about_name" />
+            android:label="@string/about_name"
+            />
         <activity android:name=".Statistics"
-            android:label="@string/statistics_name"/>
+            android:label="@string/statistics_name"
+            />
     </application>
 
 </manifest>
