@@ -226,7 +226,7 @@ public class About extends AppCompatActivity {
 
                 }
                 System.out.println(selecteditem);
-                //or this can be also right: selecteditem = level[i];
+
             }
 
             /**

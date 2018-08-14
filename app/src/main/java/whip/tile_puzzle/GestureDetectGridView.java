@@ -20,8 +20,6 @@ public class GestureDetectGridView extends GridView {
     private float mTouchY;
 
     private static final int SWIPE_MIN_DISTANCE = 100;
-    private static final int SWIPE_MAX_OFF_PATH = 100;
-    private static final int SWIPE_THRESHOLD_VELOCITY = 100;
 
     /**
      * @param context
