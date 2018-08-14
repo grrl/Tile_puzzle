@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Locale;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -811,7 +812,7 @@ public class MainActivity extends AppCompatActivity {
 
         // 2. Chain together various setter methods to set the dialog characteristics
         Drawable i = context.getDrawable(R.drawable.ic_clear_black_24dp);
-        builder.setMessage(context.getResources().getString(R.string.gameTurns) + " " + Settings.gameTurns + " " + context.getResources().getString(R.string.time) + ": " + getTimeAndReset()) //stats here as message
+        builder.setMessage(context.getResources().getString(R.string.gameTurns) + " " + Settings.gameTurns + "\n" + context.getResources().getString(R.string.time) + ": " + getTimeAndReset(context)) //stats here as message
                 .setTitle(context.getResources().getString(R.string.youWon)).setPositiveButtonIcon(i);
 
         // 3. Get the AlertDialog from create()
@@ -825,7 +826,7 @@ public class MainActivity extends AppCompatActivity {
         dialog.show();
     }
 
-    public static String getTimeAndReset(){
+    public static String getTimeAndReset(Context context){
         int min = Math.round(second / 60);
 
         int sec = second - (60 * min);
@@ -834,7 +835,9 @@ public class MainActivity extends AppCompatActivity {
 
         Settings.gameTurns = 0;
 
-        return min + " min " + sec + " seconds";
+        //lokalisointi!!
+
+        return min + " " + context.getResources().getString(R.string.minute) + " " + sec + " " + context.getResources().getString(R.string.second);
     }
 
 

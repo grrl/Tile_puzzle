@@ -15,8 +15,10 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.Locale;
+import java.util.Set;
 
 import static whip.tile_puzzle.MainActivity.getSoundandReturn;
 import static whip.tile_puzzle.MainActivity.getWins;
@@ -57,12 +59,19 @@ public class Options extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Settings.playGame = true;
-                //kutsu reset metodia
-                resetGame();
 
-                startActivity(new Intent(Options.this, MainActivity.class));
+                if(Settings.Image == -1){
 
+                    Toast.makeText(Options.this, R.string.selectImage, Toast.LENGTH_SHORT).show();
+
+                }else {
+
+                    Settings.playGame = true;
+                    //kutsu reset metodia
+                    resetGame();
+
+                    startActivity(new Intent(Options.this, MainActivity.class));
+                }
             }
         });
 
@@ -158,6 +167,7 @@ public class Options extends AppCompatActivity {
                             break;
                         default:
                             imageView.setImageResource(android.R.drawable.ic_menu_gallery);
+                            Settings.Image = -1;
                             break;
                     }
 
@@ -203,6 +213,7 @@ public class Options extends AppCompatActivity {
                             break;
                         default:
                             imageView.setImageResource(android.R.drawable.ic_menu_gallery);
+                            Settings.Image = -1;
                             break;
                     }
 
@@ -248,6 +259,7 @@ public class Options extends AppCompatActivity {
                             break;
                         default:
                             imageView.setImageResource(android.R.drawable.ic_menu_gallery);
+                            Settings.Image = -1;
                             break;
                     }
 

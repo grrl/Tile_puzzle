@@ -11,10 +11,10 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
+        android:layout_marginEnd="11dp"
         android:text="@string/moves"
         app:layout_constraintBaseline_toBaselineOf="@+id/turnsVar"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/turnsVar" />
 
     <TextView
         android:id="@+id/winsVar"
@@ -29,7 +29,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="11dp"
         android:text="@string/wins"
         app:layout_constraintBaseline_toBaselineOf="@+id/winsVar"
         app:layout_constraintEnd_toStartOf="@+id/winsVar" />
@@ -38,27 +38,27 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="16dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="34dp"
         android:text="@string/startingDate"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/dateVar"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/turnsVar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
         android:layout_marginTop="32dp"
-        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintEnd_toStartOf="@+id/dateVar"
+        app:layout_constraintStart_toStartOf="@+id/dateVar"
         app:layout_constraintTop_toBottomOf="@+id/winsVar" />
 
     <TextView
         android:id="@+id/dateVar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView4"
-        app:layout_constraintStart_toEndOf="@+id/textView4" />
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="31dp"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/turnsVar" />
 
 </android.support.constraint.ConstraintLayout>

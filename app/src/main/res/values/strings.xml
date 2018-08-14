@@ -73,4 +73,10 @@
 
     <string name="invalidMove">Invalid move</string>
 
+    <string name="selectImage">Select an image</string>
+
+    <string name="minute">minutes</string>
+
+    <string name="second">seconds</string>
+
 </resources>

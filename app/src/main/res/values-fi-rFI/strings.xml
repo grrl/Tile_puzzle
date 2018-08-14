@@ -56,7 +56,7 @@
 
     <string name="startingDate">Pelaamisen aloittaminen:</string>
 
-    <string name="gameTurns">Siirrot</string>
+    <string name="gameTurns">Siirrot:</string>
 
     <string name="time">Aika</string>
 
@@ -70,5 +70,10 @@
 
     <string name="invalidMove">Laiton siirto</string>
 
+    <string name="selectImage">Valitse kuva</string>
+
+    <string name="minute">minuuttia</string>
+
+    <string name="second">sekuntia</string>
 
 </resources>
