@@ -712,7 +712,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             buttons.add(button);
-            System.out.println(getLocation("24"));
+            //System.out.println(getLocation("24"));
         }
         m_GridView.setAdapter(new CustomAdapter(buttons, m_ColumnWidth, m_ColumnHeight));
 
