@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
@@ -29,6 +31,7 @@ public class Options extends AppCompatActivity {
     private MediaPlayer player;
     private String selecteditem;
     private ImageView imageView;
+    private CheckBox checkBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +44,15 @@ public class Options extends AppCompatActivity {
         button = /*(Button)*/ findViewById(R.id.button);
 
         imageView = /*(ImageView)*/ findViewById(R.id.imageView);
+
+        checkBox = /*(CheckBox)*/ findViewById(R.id.checkBox);
+
+        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                Settings.debugMode = b;
+            }
+        });
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
