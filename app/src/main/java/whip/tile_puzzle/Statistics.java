@@ -15,6 +15,9 @@ import static whip.tile_puzzle.MainActivity.getDateTime;
 import static whip.tile_puzzle.MainActivity.getTurns;
 import static whip.tile_puzzle.MainActivity.getWins;
 
+/**
+ *
+ */
 public class Statistics extends AppCompatActivity {
 
     private TextView wins;
@@ -25,6 +28,9 @@ public class Statistics extends AppCompatActivity {
     private SharedPreferences m_sharedPreferences;
     private DateFormat df;
 
+    /**
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,16 +63,28 @@ public class Statistics extends AppCompatActivity {
 
     }
 
+    /**
+     * @param context
+     * @return
+     */
     private int showWins(Context context){
         m_sharedPreferences = MainActivity.getSharedPreferences(context);
         return getWins(m_sharedPreferences);
     }
 
+    /**
+     * @param context
+     * @return
+     */
     private long getDate(Context context){
         m_sharedPreferences = MainActivity.getSharedPreferences(context);
         return getDateTime(m_sharedPreferences);
     }
 
+    /**
+     * @param context
+     * @return
+     */
     private int showTurns(Context context){
         m_sharedPreferences = MainActivity.getSharedPreferences(context);
         return getTurns(m_sharedPreferences);

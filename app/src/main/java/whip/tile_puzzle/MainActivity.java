@@ -24,6 +24,9 @@ import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
 
+/**
+ *
+ */
 public class MainActivity extends AppCompatActivity {
 
     private static String[] tileList;
@@ -44,7 +47,10 @@ public class MainActivity extends AppCompatActivity {
     public static MediaPlayer playerLeft;
 
 
-
+    /**
+     * @param menu
+     * @return
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
@@ -52,6 +58,10 @@ public class MainActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
+    /**
+     * @param item
+     * @return
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
@@ -75,6 +85,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    /**
+     *
+     */
     public static void resetGame(){
 
         init();
@@ -86,6 +99,9 @@ public class MainActivity extends AppCompatActivity {
         second = 0;
     }
 
+    /**
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -112,6 +128,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * @param context
+     */
     private void getDate(Context context){
 
         SharedPreferences m_sharedPreferences = getSharedPreferences(context);
@@ -123,6 +142,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    /**
+     *
+     */
     private View.OnClickListener tileListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
@@ -132,6 +154,9 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    /**
+     *
+     */
     protected static void init(){
         //m_GridView = findViewById(R.id.grid);
 
@@ -147,6 +172,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     *
+     */
     protected static void scramble() {
         int index;
         String temp;
@@ -192,8 +220,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
+    /**
+     * @param context
+     * @return
+     */
     private int getStatusBarHeight(Context context) {
         int result = 0;
         int resourceId = context.getResources().getIdentifier("status_bar_height", "dimen",
@@ -206,6 +236,9 @@ public class MainActivity extends AppCompatActivity {
         return result;
     }
 
+    /**
+     *
+     */
     private void setDimensions(){
 
         ViewTreeObserver viewTreeObserver = m_GridView.getViewTreeObserver();
@@ -227,6 +260,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * @param context
+     */
     private static void display(Context context){
         ArrayList<Button> buttons = new ArrayList<>();
         Button button;
@@ -774,10 +810,17 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * @param tile
+     * @return
+     */
     private static int getLocation(String tile){
         return Arrays.asList(tileList).indexOf(tile);
     }
 
+    /**
+     * @return
+     */
     public static boolean gameStatus(){
 
         if(getLocation("24") != 24)
@@ -790,6 +833,11 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    /**
+     * @param context
+     * @param currentPosition
+     * @param swap
+     */
     private static void swap(Context context, int currentPosition, int swap){
 
         int blankTile = getLocation("24");
@@ -862,6 +910,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    /**
+     * @param context
+     */
     public static void alertDialogShow(Context context)
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
@@ -883,6 +934,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    /**
+     *
+     */
     public static void reset(){
 
         second = 0;
@@ -890,6 +944,10 @@ public class MainActivity extends AppCompatActivity {
         Settings.gameTurns = 0;
     }
 
+    /**
+     * @param context
+     * @return
+     */
     public static String getTimeAndReset(Context context){
         int min = (int)Math.floor(second / 60);
 
@@ -905,6 +963,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    /**
+     * @param ctx
+     */
     //Sharedpreference wins setter
     public static void setSharedPreferences (Context ctx){
         SharedPreferences m_sharedPreferences = getSharedPreferences(ctx);
@@ -914,12 +975,19 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("Voitot " + getWins(m_sharedPreferences));
     }
 
+    /**
+     * @param p
+     * @return
+     */
     //Sharedpreference get wins
     public static int getWins(SharedPreferences p){
         return p.getInt("WinAmount", 0);
 
     }
 
+    /**
+     * @param ctx
+     */
     //SharedPreference turns setter
     public static void setTurnsSharedPreferences (Context ctx){
         SharedPreferences m_sharedPreferences = getSharedPreferences(ctx);
@@ -930,11 +998,19 @@ public class MainActivity extends AppCompatActivity {
 
     //SharedPreference turns getter
 
+    /**
+     * @param p
+     * @return
+     */
     public static int getTurns(SharedPreferences p){
         return p.getInt("TurnsAmount", 0);
     }
 
 
+    /**
+     * @param ctx
+     * @return
+     */
     //Sharedpreference wins SharedPreference
     public static SharedPreferences getSharedPreferences(Context ctx){
 
@@ -942,6 +1018,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    /**
+     * @param ctx
+     */
     //Sharedpreference Date setter
     private void setDateSharedPreferences(Context ctx){
         SharedPreferences m_sharedPreferences = getSharedPreferences(ctx);
@@ -950,11 +1029,19 @@ public class MainActivity extends AppCompatActivity {
         m_editor.apply();
     }
 
+    /**
+     * @param p
+     * @return
+     */
     //Sharedpreference get starting date
     public static long getDateTime(SharedPreferences p){
         return p.getLong("DateTime", 0);
     }
 
+    /**
+     * @param ctx
+     * @param bool
+     */
     //Sharedpreference sound setter
     public static void setSoundSharedPreferences(Context ctx, boolean bool){
         SharedPreferences m_sharedPreferences = getSharedPreferences(ctx);
@@ -964,11 +1051,19 @@ public class MainActivity extends AppCompatActivity {
     }
     //Sharedpreference sound getter
 
+    /**
+     * @param p
+     * @return
+     */
     public static boolean getSoundandReturn(SharedPreferences p){
         return p.getBoolean("Sound", false);
     }
 
 
+    /**
+     * @param context
+     * @param position
+     */
     public static void moveTiles(Context context, int position){
 
         int blankTile = getLocation("24");

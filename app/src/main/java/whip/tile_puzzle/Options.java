@@ -36,6 +36,9 @@ public class Options extends AppCompatActivity {
     private CheckBox checkBox;
     private Boolean isSelected;
 
+    /**
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -125,6 +128,12 @@ public class Options extends AppCompatActivity {
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
         {
+            /**
+             * @param adapter
+             * @param v
+             * @param i
+             * @param lng
+             */
             @Override
             public void onItemSelected(AdapterView adapter, View v, int i, long lng) {
 
@@ -313,6 +322,10 @@ public class Options extends AppCompatActivity {
                 System.out.println(selecteditem);
                 //or this can be also right: selecteditem = level[i];
             }
+
+            /**
+             * @param parentView
+             */
             @Override
             public void onNothingSelected(AdapterView<?> parentView)
             {
@@ -323,17 +336,27 @@ public class Options extends AppCompatActivity {
 
     }
 
+    /**
+     *
+     */
     private void playSound(){
         player = MediaPlayer.create(getApplicationContext(), R.raw.soundon);
 
         player.start();
     }
 
+    /**
+     * @param context
+     * @return
+     */
     private boolean getSound(Context context){
         m_sharedPreferences = MainActivity.getSharedPreferences(context);
         return getSoundandReturn(m_sharedPreferences);
     }
 
+    /**
+     * @param bool
+     */
     private void setSound(boolean bool){
         setSoundSharedPreferences(this, bool);
     }

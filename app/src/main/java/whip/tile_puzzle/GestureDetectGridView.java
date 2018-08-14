@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.GridView;
 
 
+/**
+ *
+ */
 public class GestureDetectGridView extends GridView {
     private GestureDetector gDetector;
     private boolean mFlingConfirmed = false;
@@ -20,21 +23,39 @@ public class GestureDetectGridView extends GridView {
     private static final int SWIPE_MAX_OFF_PATH = 100;
     private static final int SWIPE_THRESHOLD_VELOCITY = 100;
 
+    /**
+     * @param context
+     */
     public GestureDetectGridView(Context context) {
         super(context);
         init(context);
     }
 
+    /**
+     * @param context
+     * @param attrs
+     */
     public GestureDetectGridView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context);
     }
 
+    /**
+     * @param context
+     * @param attrs
+     * @param defStyleAttr
+     */
     public GestureDetectGridView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context);
     }
 
+    /**
+     * @param context
+     * @param attrs
+     * @param defStyleAttr
+     * @param defStyleRes
+     */
     @TargetApi(Build.VERSION_CODES.LOLLIPOP) // API 21
     public GestureDetectGridView(Context context, AttributeSet attrs, int defStyleAttr,
                                  int defStyleRes) {
@@ -43,16 +64,27 @@ public class GestureDetectGridView extends GridView {
     }
 
 
+    /**
+     * @param context
+     */
     private void init(final Context context) {
 
 
         gDetector = new GestureDetector(context, new GestureDetector.SimpleOnGestureListener() {
+            /**
+             * @param event
+             * @return
+             */
             @Override
             public boolean onDown(MotionEvent event) {
                 return true;
             }
 
 
+            /**
+             * @param e1
+             * @return
+             */
             @Override
             public boolean onSingleTapUp(MotionEvent e1) {
 
@@ -79,6 +111,10 @@ public class GestureDetectGridView extends GridView {
         });
     }
 
+    /**
+     * @param ev
+     * @return
+     */
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         int action = ev.getActionMasked();
@@ -106,6 +142,10 @@ public class GestureDetectGridView extends GridView {
         return super.onInterceptTouchEvent(ev);
     }
 
+    /**
+     * @param ev
+     * @return
+     */
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
         return gDetector.onTouchEvent(ev);

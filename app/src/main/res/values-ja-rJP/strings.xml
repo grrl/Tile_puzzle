@@ -4,8 +4,8 @@
     <string name="app_name">パズル</string>
 
     <string-array name="ピクチャ"> <!--Pikucha-->
-        <item>クラシック</item><!--Kurashikku-->
         <item>画像を選択する</item> <!--Gazo o sentaku suru-->
+        <item>クラシック</item><!--Kurashikku-->
         <item>日没</item> <!--Nichibotsu -->
         <item>花</item> <!--Hana-->
         <item>ギタリスト</item> <!--Gitarisuto-->

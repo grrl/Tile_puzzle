@@ -13,6 +13,9 @@ import android.widget.TextView;
 import java.util.Locale;
 
 
+/**
+ *
+ */
 public class About extends AppCompatActivity {
 
     private Spinner spinner;
@@ -20,6 +23,10 @@ public class About extends AppCompatActivity {
     private ImageView imageView;
     private TextView textView;
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +61,13 @@ public class About extends AppCompatActivity {
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
         {
+            /**
+             *
+             * @param adapter
+             * @param v
+             * @param i
+             * @param lng
+             */
             @Override
             public void onItemSelected(AdapterView adapter, View v, int i, long lng) {
 
@@ -214,6 +228,11 @@ public class About extends AppCompatActivity {
                 System.out.println(selecteditem);
                 //or this can be also right: selecteditem = level[i];
             }
+
+            /**
+             *
+             * @param parentView
+             */
             @Override
             public void onNothingSelected(AdapterView<?> parentView)
             {
