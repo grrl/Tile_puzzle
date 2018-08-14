@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Locale;
 import java.util.Random;
+import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -56,15 +57,15 @@ public class MainActivity extends AppCompatActivity {
 
         switch (item.getItemId()){
             case R.id.action_settings:
-                Toast.makeText(MainActivity.this, R.string.toastSettings, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, R.string.toastSettings, Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, Options.class));
                 break;
             case R.id.action_statistics:
-                Toast.makeText(MainActivity.this, R.string.toastStatistics, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, R.string.toastStatistics, Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, Statistics.class));
                 break;
             case R.id.action_about:
-                Toast.makeText(MainActivity.this, R.string.toastAbout, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, R.string.toastAbout, Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, About.class));
                 break;
         }
@@ -81,6 +82,8 @@ public class MainActivity extends AppCompatActivity {
         scramble();
 
         Settings.gameTurns = 0;
+
+        second = 0;
     }
 
     @Override
@@ -136,6 +139,7 @@ public class MainActivity extends AppCompatActivity {
 
         tileList = new String[DIMENSIONS];
 
+        reset();
 
         for (int i = 0; i < DIMENSIONS; i++) {
             tileList[i] = String.valueOf(i);
@@ -709,6 +713,58 @@ public class MainActivity extends AppCompatActivity {
                 else if (tileList[i].equals("24"))
                     button.setBackgroundResource(R.drawable.temppeli_part_025);
 
+            } else if (Settings.Image == 9){
+
+                if (tileList[i].equals("0"))
+                    button.setBackgroundResource(R.drawable.classic_part_001);
+                else if (tileList[i].equals("1"))
+                    button.setBackgroundResource(R.drawable.classic_part_002);
+                else if (tileList[i].equals("2"))
+                    button.setBackgroundResource(R.drawable.classic_part_003);
+                else if (tileList[i].equals("3"))
+                    button.setBackgroundResource(R.drawable.classic_part_004);
+                else if (tileList[i].equals("4"))
+                    button.setBackgroundResource(R.drawable.classic_part_005);
+                else if (tileList[i].equals("5"))
+                    button.setBackgroundResource(R.drawable.classic_part_006);
+                else if (tileList[i].equals("6"))
+                    button.setBackgroundResource(R.drawable.classic_part_007);
+                else if (tileList[i].equals("7"))
+                    button.setBackgroundResource(R.drawable.classic_part_008);
+                else if (tileList[i].equals("8"))
+                    button.setBackgroundResource(R.drawable.classic_part_009);
+                else if (tileList[i].equals("9"))
+                    button.setBackgroundResource(R.drawable.classic_part_010);
+                else if (tileList[i].equals("10"))
+                    button.setBackgroundResource(R.drawable.classic_part_011);
+                else if (tileList[i].equals("11"))
+                    button.setBackgroundResource(R.drawable.classic_part_012);
+                else if (tileList[i].equals("12"))
+                    button.setBackgroundResource(R.drawable.classic_part_013);
+                else if (tileList[i].equals("13"))
+                    button.setBackgroundResource(R.drawable.classic_part_014);
+                else if (tileList[i].equals("14"))
+                    button.setBackgroundResource(R.drawable.classic_part_015);
+                else if (tileList[i].equals("15"))
+                    button.setBackgroundResource(R.drawable.classic_part_016);
+                else if (tileList[i].equals("16"))
+                    button.setBackgroundResource(R.drawable.classic_part_017);
+                else if (tileList[i].equals("17"))
+                    button.setBackgroundResource(R.drawable.classic_part_018);
+                else if (tileList[i].equals("18"))
+                    button.setBackgroundResource(R.drawable.classic_part_019);
+                else if (tileList[i].equals("19"))
+                    button.setBackgroundResource(R.drawable.classic_part_020);
+                else if (tileList[i].equals("20"))
+                    button.setBackgroundResource(R.drawable.classic_part_021);
+                else if (tileList[i].equals("21"))
+                    button.setBackgroundResource(R.drawable.classic_part_022);
+                else if (tileList[i].equals("22"))
+                    button.setBackgroundResource(R.drawable.classic_part_023);
+                else if (tileList[i].equals("23"))
+                    button.setBackgroundResource(R.drawable.classic_part_024);
+                else if (tileList[i].equals("24"))
+                    button.setBackgroundResource(R.drawable.classic_part_025);
             }
 
             buttons.add(button);
@@ -824,6 +880,14 @@ public class MainActivity extends AppCompatActivity {
         setSharedPreferences(context);
 
         dialog.show();
+    }
+
+
+    public static void reset(){
+
+        second = 0;
+
+        Settings.gameTurns = 0;
     }
 
     public static String getTimeAndReset(Context context){

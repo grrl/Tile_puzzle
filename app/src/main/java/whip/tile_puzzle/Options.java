@@ -34,6 +34,7 @@ public class Options extends AppCompatActivity {
     private String selecteditem;
     private ImageView imageView;
     private CheckBox checkBox;
+    private Boolean isSelected;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,9 @@ public class Options extends AppCompatActivity {
         setContentView(R.layout.activity_options);
 
         Spinner spinner = /*(Spinner)*/ findViewById(R.id.spinner);
+
+        isSelected = false;
+
         //painike
         button = /*(Button)*/ findViewById(R.id.button);
 
@@ -60,7 +64,7 @@ public class Options extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if(Settings.Image == -1){
+                if(!isSelected){
 
                     Toast.makeText(Options.this, R.string.selectImage, Toast.LENGTH_SHORT).show();
 
@@ -132,42 +136,56 @@ public class Options extends AppCompatActivity {
                         case "Auringonlasku":
                             Settings.Image = 1;
                             imageView.setImageResource(R.drawable.p1);
+                            isSelected = true;
+                            break;
+                        case "Klassinen":
+                            Settings.Image = 9;
+                            imageView.setImageResource(R.drawable.p10);
+                            isSelected = true;
                             break;
                         case "Kukat":
                             Settings.Image = 6;
                             imageView.setImageResource(R.drawable.p5);
+                            isSelected = true;
                             break;
                         case "Kitaristi":
                             Settings.Image = 5;
                             imageView.setImageResource(R.drawable.p6);
+                            isSelected = true;
                             break;
                         case "Pyykit":
                             Settings.Image = 7;
                             imageView.setImageResource(R.drawable.p9);
+                            isSelected = true;
                             break;
                         case "Fuji vuori":
                             Settings.Image = 2;
                             imageView.setImageResource(R.drawable.p3);
+                            isSelected = true;
                             break;
                         case "Temppeli":
                             Settings.Image = 8;
                             imageView.setImageResource(R.drawable.p4);
+                            isSelected = true;
                             break;
                         case "Väsynyt palkansaaja":
                             Settings.Image = 4;
                             imageView.setImageResource(R.drawable.p8);
+                            isSelected = true;
                             break;
                         case "Rautatieasema":
                             Settings.Image = 3;
                             imageView.setImageResource(R.drawable.p2);
+                            isSelected = true;
                             break;
                         case "Myyntiautomaatti":
                             Settings.Image = 0;
                             imageView.setImageResource(R.drawable.p7);
+                            isSelected = true;
                             break;
                         default:
                             imageView.setImageResource(android.R.drawable.ic_menu_gallery);
-                            Settings.Image = -1;
+                            isSelected = false;
                             break;
                     }
 
@@ -175,45 +193,59 @@ public class Options extends AppCompatActivity {
 
                     switch (selecteditem){
 
+                        case "クラシック":
+                            Settings.Image = 9;
+                            imageView.setImageResource(R.drawable.p10);
+                            isSelected = true;
+                            break;
                         case "日没":
                             Settings.Image = 1;
                             imageView.setImageResource(R.drawable.p1);
+                            isSelected = true;
                             break;
                         case "花":
                             Settings.Image = 6;
                             imageView.setImageResource(R.drawable.p5);
+                            isSelected = true;
                             break;
                         case "ギタリスト":
                             Settings.Image = 5;
                             imageView.setImageResource(R.drawable.p6);
+                            isSelected = true;
                             break;
                         case "ランドリー":
                             Settings.Image = 7;
                             imageView.setImageResource(R.drawable.p9);
+                            isSelected = true;
                             break;
                         case "フジ":
                             Settings.Image = 2;
                             imageView.setImageResource(R.drawable.p3);
+                            isSelected = true;
                             break;
                         case "寺":
                             Settings.Image = 8;
                             imageView.setImageResource(R.drawable.p4);
+                            isSelected = true;
                             break;
                         case "サラリーマン":
                             Settings.Image = 4;
                             imageView.setImageResource(R.drawable.p8);
+                            isSelected = true;
                             break;
                         case "鉄道の駅":
                             Settings.Image = 3;
                             imageView.setImageResource(R.drawable.p2);
+                            isSelected = true;
                             break;
                         case "自動販売機":
                             Settings.Image = 0;
                             imageView.setImageResource(R.drawable.p7);
+                            isSelected = true;
                             break;
                         default:
                             imageView.setImageResource(android.R.drawable.ic_menu_gallery);
-                            Settings.Image = -1;
+                            isSelected = false;
                             break;
                     }
 
@@ -221,45 +253,59 @@ public class Options extends AppCompatActivity {
 
                     switch (selecteditem){
 
+                        case "Classic":
+                            Settings.Image = 9;
+                            imageView.setImageResource(R.drawable.p10);
+                            isSelected = true;
+                            break;
                         case "Flowers":
                             Settings.Image = 6;
                             imageView.setImageResource(R.drawable.p5);
+                            isSelected = true;
                             break;
                         case "Guitarist":
                             Settings.Image = 5;
                             imageView.setImageResource(R.drawable.p6);
+                            isSelected = true;
                             break;
                         case "Laundry":
                             Settings.Image = 7;
                             imageView.setImageResource(R.drawable.p9);
+                            isSelected = true;
                             break;
                         case "Mount Fuji":
                             Settings.Image = 2;
                             imageView.setImageResource(R.drawable.p3);
+                            isSelected = true;
                             break;
                         case "Sunset":
                             Settings.Image = 1;
                             imageView.setImageResource(R.drawable.p1);
+                            isSelected = true;
                             break;
                         case "Temple":
                             Settings.Image = 8;
                             imageView.setImageResource(R.drawable.p4);
+                            isSelected = true;
                             break;
                         case "Tired salaryman":
                             Settings.Image = 4;
                             imageView.setImageResource(R.drawable.p8);
+                            isSelected = true;
                             break;
                         case "Railway station":
                             Settings.Image = 3;
                             imageView.setImageResource(R.drawable.p2);
+                            isSelected = true;
                             break;
                         case "Vending Machine":
                             Settings.Image = 0;
                             imageView.setImageResource(R.drawable.p7);
+                            isSelected = true;
                             break;
                         default:
                             imageView.setImageResource(android.R.drawable.ic_menu_gallery);
-                            Settings.Image = -1;
+                            isSelected = false;
                             break;
                     }
 

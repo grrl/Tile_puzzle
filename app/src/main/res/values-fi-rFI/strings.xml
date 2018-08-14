@@ -6,6 +6,7 @@
     <string-array name="kuvat">
         <item>Valitse kuva</item>
         <item>Auringonlasku</item>
+        <item>Klassinen</item>
         <item>Kukat</item>
         <item>Kitaristi</item>
         <item>Pyykit</item>

@@ -4,6 +4,7 @@
 
     <string-array name="images">
         <item>Choose a picture</item>
+        <item>Classic</item>
         <item>Flowers</item>
         <item>Guitarist</item>
         <item>Laundry</item>

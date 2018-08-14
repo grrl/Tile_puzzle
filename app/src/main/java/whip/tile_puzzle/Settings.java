@@ -4,7 +4,7 @@ public class Settings {
 
     public static boolean debugMode = false;
 
-    public static int Image = 8;
+    public static int Image = 9;
 
     public static boolean playGame = true;
 
