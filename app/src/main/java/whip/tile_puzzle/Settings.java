@@ -1,7 +1,7 @@
 package whip.tile_puzzle;
 
 /**
- * Settings luokka
+ * Settings luokka staattiset muuttujat
  */
 public class Settings {
 

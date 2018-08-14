@@ -62,7 +62,7 @@ public class About extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
         {
             /**
-             *
+             * Kutsutaan kun pelaaja valitsee dropdownlistalta jotain
              * @param adapter
              * @param v
              * @param i

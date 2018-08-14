@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
-    /**
+    /** Kutsutaan kun pelaaja valitsee dropdownmenusta
      * @param item
      * @return
      */
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     *
+     * Kutsutaan kun halutaan resetoida peli
      */
     public static void resetGame(){
 
@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    /**
+    /** Kutsutaan saadakseen pelin aloituspäivämäärä
      * @param context
      */
     private void getDate(Context context){
@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     *
+     * Debuggaukseen
      */
     private View.OnClickListener tileListener = new View.OnClickListener() {
         @Override
@@ -155,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
     };
 
     /**
-     *
+     * Kutsutaan alustuksessa
      */
     protected static void init(){
         //m_GridView = findViewById(R.id.grid);
@@ -173,7 +173,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Arpoo palat
+     * Metodi arpoo palat
      */
     protected static void scramble() {
         int index;
@@ -259,7 +259,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    /**
+    /** Näytetään palat
      * @param context
      */
     private static void display(Context context){
@@ -809,7 +809,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    /**
+    /** Kutsutaan jos halutaan tietää jonkun palan sijainti ruudukossa
      * @param tile
      * @return
      */
@@ -817,7 +817,7 @@ public class MainActivity extends AppCompatActivity {
         return Arrays.asList(tileList).indexOf(tile);
     }
 
-    /**
+    /** Kutsutaan kun halutaan tietää onko peli voitettu
      * @return
      */
     public static boolean gameStatus(){
@@ -832,7 +832,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    /**
+    /** Kutsutaan kun siiretään paloja
      * @param context
      * @param currentPosition
      * @param swap
@@ -909,7 +909,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    /**
+    /** Kutsutaan kun halutaan näyttää voitto
      * @param context
      */
     public static void alertDialogShow(Context context)
@@ -941,7 +941,7 @@ public class MainActivity extends AppCompatActivity {
         Settings.gameTurns = 0;
     }
 
-    /**
+    /** Kutsutaan kun halutaan tietää kuinka kauan aikaa meni voittoon
      * @param context
      * @return
      */
@@ -960,7 +960,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    /**
+    /** Setteri voitot
      * @param ctx
      */
     //Sharedpreference wins setter
@@ -972,7 +972,7 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("Voitot " + getWins(m_sharedPreferences));
     }
 
-    /**
+    /** Getteri voitot
      * @param p
      * @return
      */
@@ -982,7 +982,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    /**
+    /** Setteri siirtojen kokonaismäärä
      * @param ctx
      */
     //SharedPreference turns setter
@@ -995,7 +995,7 @@ public class MainActivity extends AppCompatActivity {
 
     //SharedPreference turns getter
 
-    /**
+    /** Getteri siirtojen kokoneismäärä
      * @param p
      * @return
      */
@@ -1004,7 +1004,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    /**
+    /** Sharedpreferences getter
      * @param ctx
      * @return
      */
@@ -1015,7 +1015,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    /**
+    /** Sharedpreferences datetime setter
      * @param ctx
      */
     //Sharedpreference Date setter
@@ -1026,7 +1026,7 @@ public class MainActivity extends AppCompatActivity {
         m_editor.apply();
     }
 
-    /**
+    /** Datetime getter
      * @param p
      * @return
      */
@@ -1035,7 +1035,7 @@ public class MainActivity extends AppCompatActivity {
         return p.getLong("DateTime", 0);
     }
 
-    /**
+    /** Äänen SharedPreference setter
      * @param ctx
      * @param bool
      */
@@ -1048,7 +1048,7 @@ public class MainActivity extends AppCompatActivity {
     }
     //Sharedpreference sound getter
 
-    /**
+    /**Äänen SharedPreference getter
      * @param p
      * @return
      */
@@ -1057,7 +1057,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    /**
+    /** Kutsutaan kun halutaan siirtää tiiliä
      * @param context
      * @param position
      */

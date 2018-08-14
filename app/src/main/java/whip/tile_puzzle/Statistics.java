@@ -63,7 +63,7 @@ public class Statistics extends AppCompatActivity {
 
     }
 
-    /**
+    /** Kutsutaan kun halutaan näyttää voitot Statistics luokassa
      * @param context
      * @return
      */
@@ -72,7 +72,7 @@ public class Statistics extends AppCompatActivity {
         return getWins(m_sharedPreferences);
     }
 
-    /**
+    /** Kutsutaan kun halutaan näyttää päivämäärä Statistics luokassa
      * @param context
      * @return
      */
@@ -81,7 +81,7 @@ public class Statistics extends AppCompatActivity {
         return getDateTime(m_sharedPreferences);
     }
 
-    /**
+    /** Kutsutaan kun halutaan näyttää siirtojen määrä statistics luokassa
      * @param context
      * @return
      */
