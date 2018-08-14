@@ -114,11 +114,11 @@ public class Options extends AppCompatActivity {
                             break;
                         case "Kukat":
                             Settings.Image = 6;
-                            imageView.setImageResource(R.drawable.p6);
+                            imageView.setImageResource(R.drawable.p5);
                             break;
                         case "Kitaristi":
                             Settings.Image = 5;
-                            imageView.setImageResource(R.drawable.p5);
+                            imageView.setImageResource(R.drawable.p6);
                             break;
                         case "Pyykit":
                             Settings.Image = 7;
@@ -159,11 +159,11 @@ public class Options extends AppCompatActivity {
                             break;
                         case "花":
                             Settings.Image = 6;
-                            imageView.setImageResource(R.drawable.p6);
+                            imageView.setImageResource(R.drawable.p5);
                             break;
                         case "ギタリスト":
                             Settings.Image = 5;
-                            imageView.setImageResource(R.drawable.p5);
+                            imageView.setImageResource(R.drawable.p6);
                             break;
                         case "ランドリー":
                             Settings.Image = 7;
