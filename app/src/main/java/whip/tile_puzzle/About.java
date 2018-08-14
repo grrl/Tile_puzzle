@@ -73,7 +73,7 @@ public class About extends AppCompatActivity {
                             break;
                         case "Klassinen":
                             imageView.setImageResource(R.drawable.p10);
-                            textView.setText("tbd");
+                            textView.setText(R.string.default_theme);
                             break;
                         case "Kitaristi":
                             imageView.setImageResource(R.drawable.p5);
@@ -116,7 +116,7 @@ public class About extends AppCompatActivity {
 
                         case "クラシック":
                             imageView.setImageResource(R.drawable.p10);
-                            textView.setText("tbd");
+                            textView.setText(R.string.default_theme);
                             break;
                         case "日没":
                             imageView.setImageResource(R.drawable.p1);
@@ -166,7 +166,7 @@ public class About extends AppCompatActivity {
 
                         case "Classic":
                             imageView.setImageResource(R.drawable.p10);
-                            textView.setText("tbd");
+                            textView.setText(R.string.default_theme);
                             break;
                         case "Flowers":
                             imageView.setImageResource(R.drawable.p5);
