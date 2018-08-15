@@ -1043,7 +1043,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    /** Kutsutaan kun halutaan siirtää tiiliä
+    /** Kutsutaan kun halutaan siirtää paloja
      * @param context
      * @param position
      */
