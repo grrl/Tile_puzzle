@@ -903,7 +903,7 @@ public class MainActivity extends AppCompatActivity {
 
         Drawable i = context.getDrawable(R.drawable.ic_clear_black_24dp);
         builder.setMessage(context.getResources().getString(R.string.gameTurns) + " " + Settings.gameTurns + "\n" + context.getResources().getString(R.string.time) + ": " + getTimeAndReset(context)) //stats here as message
-                .setTitle(context.getResources().getString(R.string.youWon)).setPositiveButtonIcon(i);
+                .setTitle(context.getResources().getString(R.string.youWon)).setIcon(i)/*setPositiveButtonIcon(i)*/; //api level 28
 
         AlertDialog dialog = builder.create();
 
