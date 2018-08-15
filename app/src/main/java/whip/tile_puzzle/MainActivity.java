@@ -200,7 +200,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        Settings.debugMode = false; //resetoi valinta harjoittelu tilalle
+        Settings.debugMode = false; //resetoi valinta
     }
 
 

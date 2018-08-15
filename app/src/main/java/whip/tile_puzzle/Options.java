@@ -346,7 +346,7 @@ public class Options extends AppCompatActivity {
     }
 
     /**
-     *
+     * Soita äänimerkki että äänet ovat päällä
      */
     private void playSound(){
         player = MediaPlayer.create(getApplicationContext(), R.raw.soundon);
@@ -354,7 +354,7 @@ public class Options extends AppCompatActivity {
         player.start();
     }
 
-    /**
+    /** Äänien getter
      * @param context
      * @return
      */
