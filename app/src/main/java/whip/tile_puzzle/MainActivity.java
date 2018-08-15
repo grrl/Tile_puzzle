@@ -166,12 +166,9 @@ public class MainActivity extends AppCompatActivity {
         Random random = new Random();
 
         //add debug scramble
-        String p18 = tileList[18]; //18
-        System.out.println("p18 " + p18);
+        String p18 = tileList[18];
         String p19 = tileList[19]; //19
-        System.out.println("p19 " + p19);
         String p23 = tileList[23]; //23
-        System.out.println("p23 " + p23);
 
         System.out.println("Shuffle pois päältä " + Settings.debugMode);
 
