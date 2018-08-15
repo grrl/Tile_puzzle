@@ -941,7 +941,7 @@ public class MainActivity extends AppCompatActivity {
         second = 0;
 
         Settings.gameTurns = 0;
-        
+
         return min + " " + context.getResources().getString(R.string.minute) + " " + sec + " " + context.getResources().getString(R.string.second);
     }
 

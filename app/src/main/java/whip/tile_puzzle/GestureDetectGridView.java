@@ -101,7 +101,7 @@ public class GestureDetectGridView extends GridView {
 
                 System.out.println("painike " + button);
                 System.out.println("indexi " + position);
-                MainActivity.moveTiles(context, position); //tähän jotain
+                MainActivity.moveTiles(context, position);
                 //return super.onSingleTapUp(e1);
                 return true;
             }
