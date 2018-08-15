@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static String[] tileList;
 
-    private static GestureDetectGridView m_GridView ;
+    private static GestureDetectGridView m_GridView;
 
     private static final int COLUMNS = 5;
     private static final int DIMENSIONS = COLUMNS * COLUMNS;
