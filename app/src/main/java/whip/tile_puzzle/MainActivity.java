@@ -917,7 +917,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     *
+     * Resetoi parametreja
      */
     public static void reset(){
 
